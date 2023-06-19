@@ -19,11 +19,14 @@ const openForm= () =>{
       <link rel="stylesheet" href="popup-style.css">
     </head>
     <body>
-  
+    <div>
+    <div "class=logo"></div>
+    <h1>Contact Form</h1>
+    </div>
       <form class="contact-form"  method="POST">
-      <h2>Contact Form</h2>
+
       <div class="form-group">
-        <label for="name">Name:</label>
+        <label for="name" value="name">Name:</label>
         <input type="text" id="name" name="name" required>
       </div>
       <div class="form-group">
