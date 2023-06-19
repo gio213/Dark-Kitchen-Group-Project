@@ -137,9 +137,41 @@ main {
 
 footer {
     border: red solid 2px;
+    background-color: blueviolet;
     width: 100%;
     height: 6rem;
-
+    color: black;
     display: flex;
-    
+    justify-content: space-around;
+    padding-left: 18rem;
+}
+.footerLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.footerLinks{
+    display: flex;
+}
+.footerLinks p{
+    margin: 0px 1rem;
+}
+.footerSocialMedia{
+    font-size: 20px;
+    color: white;
+   
+}
+.footerSocialMedia a{
+    margin: 0px 1rem;
+}
+.footerRight{
+    font-size: 3rem;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 9rem;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+
 }
