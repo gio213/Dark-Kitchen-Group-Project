@@ -158,10 +158,11 @@ const openaboutUs = () => {
       </style>
       <section class="about-section">
       <h1>About Us</h1>
-      <p>Welcome to our Dark Kitchen! We are a team of passionate chefs who strive to deliver delicious and unique dishes right to your doorstep. With our carefully crafted recipes and high-quality ingredients, we aim to provide an exceptional dining experience in the comfort of your own home.</p>
-      <p>At our Dark Kitchen, we focus on creating innovative and mouthwatering dishes that cater to various dietary preferences. Whether you're a meat lover, a vegetarian, or follow a specific diet, we have a wide range of options to satisfy your cravings.</p>
-      <p>Our dedicated team of chefs and staff work tirelessly to ensure that every order is prepared with utmost care and attention to detail. We value customer satisfaction and aim to exceed your expectations with every meal.</p>
-      <p>Thank you for choosing our Dark Kitchen. We look forward to serving you and creating memorable dining experiences.</p>
+      <p>Welcome to our Dark Kitchen! We are a team of passionate chefs who strive to deliver delicious and unique dishes right to your doorstep. With our carefully crafted recipes and high-quality ingredients, we aim to provide an exceptional dining experience in the comfort of your own home.<br>
+      At our Dark Kitchen, we focus on creating innovative and mouthwatering dishes that cater to various dietary preferences. Whether you're a meat lover, a vegetarian, or follow a specific diet, we have a wide range of options to satisfy your cravings.<br>
+      Our dedicated team of chefs and staff work tirelessly to ensure that every order is prepared with utmost care and attention to detail. We value customer satisfaction and aim to exceed your expectations with every meal.<br>
+      Thank you for choosing our Dark Kitchen. We look forward to serving you and creating memorable dining experiences.</p>
+
   </section>
 
     `;
