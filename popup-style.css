@@ -1,4 +1,46 @@
+/* ==== GOOGLE FONTS ====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+/* ==== VARIABLES CSS ====*/
+:root {
+  /* 1rem = 16px */
+  --header-height: 4rem;
+
+  /* ==== Font and typography ====*/
+  --body-font: "Roboto", sans-serif;
+
+  /* ==== CoLors ====*/
+}
+
+:root,
+:root.light {
+  /* HSL coLor mode */
+  --highlight-color: hsl(180, 100%, 40%);
+  --text-color: hsl(180, 5%, 19%);
+  --search-bar-color: hsl(0, 0%, 96%);
+  --body-color: hsl(0, 0%, 100%);
+  --tag-color: hsl(4, 62%, 48%);
+  --footer-color: hsl(180, 5%, 19%);
+}
+/* 
+:root,
+:root.dark {
+
+  --highlight-color: hsl(180, 100%, 40%);
+  --search-bar-color: hsl(0, 0%, 29%);
+  --text-color: hsl(0, 0%, 100%);
+  --body-color: hsl(180, 4%, 27%);
+  --tag-color: hsl(4, 62%, 48%);
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body{
+    background-color:var(--search-bar-color);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -9,7 +51,11 @@ body{
     flex-direction: column;
     height: 25rem;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
+    background-color:var(--search-bar-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--tag-color);
 }
 .form-group{
     display: flex;
@@ -24,4 +70,20 @@ body{
 } 
 .logo{
     border: orange dashed 2px;
+}
+#message{
+    border-radius: 1rem;
+    height: 3rem;
+}
+
+
+/* About Us*/
+h1{
+    text-align: center;
+}
+.about-section{
+padding: 1rem;
+}
+.about-section p{
+    padding: 1rem;
 }
