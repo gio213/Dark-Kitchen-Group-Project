@@ -1,3 +1,37 @@
+/* ==== GOOGLE FONTS ====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+/* ==== VARIABLES CSS ====*/
+:root {
+    /* 1rem = 16px */
+    --header-height: 3rem;
+
+    /* ==== Font and typography ====*/
+    --body-font: "Roboto", sans-serif;
+
+    /* ==== CoLors ====*/
+}
+
+body.light-theme {
+    /* HSL coLor mode */
+    --highlight-color: hsl(180, 100%, 40%);
+    --text-color: hsl(180, 5%, 19%);
+    --body-color: hsl(0, 0%, 100%);
+    --tag-color: hsl(4, 62%, 48%);
+}
+
+body.dark-theme {
+    /* ==== CoLors ====*/
+    /* Change favorite coLor */
+    --hue-color: 180;
+
+    /* HSL coLor mode */
+    --highlight-color: hsl(180, 100%, 40%);
+    --text-color: hsl(0, 0%, 100%);
+    --body-color: hsl(180, 4%, 27%);
+    --tag-color: hsl(4, 62%, 48%);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -55,7 +89,6 @@ header {
     height: 3rem;
 
     display: flex;
-
 }
 
 .loginContainer {
@@ -100,12 +133,10 @@ main {
     border: black solid 2px;
     width: 100%;
     height: 100%;
-
     list-style: none;
 
     display: flex;
     flex-direction: column;
-
 }
 
 li {
@@ -120,6 +151,7 @@ li {
     border: green solid 2px;
     width: 75%;
     height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-content: space-around;
