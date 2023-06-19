@@ -3,165 +3,229 @@
 
 /* ==== VARIABLES CSS ====*/
 :root {
-  /* 1rem = 16px */
-  --header-height: 3rem;
+    /* 1rem = 16px */
+    --header-height: 3rem;
 
-  /* ==== Font and typography ====*/
-  --body-font: "Roboto", sans-serif;
+    /* ==== Font and typography ====*/
+    --body-font: "Roboto", sans-serif;
 
-  /* ==== CoLors ====*/
+    /* ==== CoLors ====*/
 }
 
 body.light-theme {
-  /* HSL coLor mode */
-  --highlight-color: hsl(180, 100%, 40%);
-  --text-color: hsl(180, 5%, 19%);
-  --body-color: hsl(0, 0%, 100%);
-  --tag-color: hsl(4, 62%, 48%);
+    /* HSL coLor mode */
+    --highlight-color: hsl(180, 100%, 40%);
+    --text-color: hsl(180, 5%, 19%);
+    --body-color: hsl(0, 0%, 100%);
+    --tag-color: hsl(4, 62%, 48%);
 }
 
 body.dark-theme {
-  /* ==== CoLors ====*/
-  /* Change favorite coLor */
-  --hue-color: 180;
+    /* ==== CoLors ====*/
+    /* Change favorite coLor */
+    --hue-color: 180;
 
-  /* HSL coLor mode */
-  --highlight-color: hsl(180, 100%, 40%);
-  --text-color: hsl(0, 0%, 100%);
-  --body-color: hsl(180, 4%, 27%);
-  --tag-color: hsl(4, 62%, 48%);
+    /* HSL coLor mode */
+    --highlight-color: hsl(180, 100%, 40%);
+    --text-color: hsl(0, 0%, 100%);
+    --body-color: hsl(180, 4%, 27%);
+    --tag-color: hsl(4, 62%, 48%);
 }
 
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+
 }
 
 body {
-  width: 100%;
+    width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 /*HEADER SECTION*/
 
 header {
-  width: 100%;
+    width: 100%;
 
-  display: flex;
+    display: flex;
+
 }
 
 .logoContainer {
-  border: red solid 2px;
-  width: 20%;
-  height: 4rem;
+    border: red solid 2px;
+    width: 20%;
+    height: 4rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-  border: orange dashed 2px;
-  width: 80%;
-  height: 70%;
+    border: orange dashed 2px;
+    width: 80%;
+    height: 70%;
 
-  display: flex;
+    display: flex;
 }
 
 .searchBarContainer {
-  border: red solid 2px;
-  width: 60%;
-  padding-left: 1rem;
+    border: red solid 2px;
+    width: 60%;
+    padding-left: 1rem;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .searchBar {
-  border: blue solid 2px;
-  width: 80%;
-  height: 3rem;
+    border: blue solid 2px;
+    width: 80%;
+    height: 3rem;
 
-  display: flex;
+    display: flex;
 }
 
 .loginContainer {
-  border: red solid 2px;
-  width: 20%;
+    border: red solid 2px;
+    width: 20%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login {
-  border: violet dashed 2px;
-  width: 90%;
-  height: 3rem;
+    border: violet dashed 2px;
+    width: 90%;
+    height: 3rem;
 
-  display: flex;
+    display: flex;
 }
 
 /*MAIN SECTION*/
 
 main {
-  border: rgb(0, 255, 200) solid 2px;
-  width: 100%;
-  height: 100vh;
+    border: rgb(0, 255, 200) solid 2px;
+    width: 100%;
+    height: 100vh;
 
-  display: flex;
-  align-content: space-between;
+    display: flex;
+    align-content: space-between;
 }
 
 .filtersContainer {
-  border: blue solid 2px;
-  width: 25%;
-  height: 100vh;
+    border: blue solid 2px;
+    width: 25%;
+    height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .filters {
-  border: black solid 2px;
-  width: 100%;
-  height: 100%;
+    border: black solid 2px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
 
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
-  border: red solid 2px;
-  width: 90%;
-  height: 2rem;
+    border: red solid 2px;
+    width: 90%;
+    height: 2rem;
 
-  display: flex;
+    display: flex;
 }
 
 .foodContainer {
-  border: green solid 2px;
-  width: 75%;
-  height: 100vh;
+    border: green solid 2px;
+    width: 75%;
+    height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
 }
+
+.card {
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.foodImgDiv {
+    width: 100%;
+    height: 100px;
+    border: 1px solid red;
+}
+
+.namePriceDiv {
+    width: 100%;
+    height: 50px;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(72, 217, 20);
+}
+
+.price {
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(240, 117, 1);
+}
+
+.tags {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(240, 117, 1);
+    display: flex;
+    justify-content: flex-start
+}
+
+.rating {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(240, 117, 1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rating i {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
 
 /*FOOTER SECTION*/
 
 footer {
-  border: red solid 2px;
-  width: 100%;
-  height: 6rem;
+    border: red solid 2px;
+    width: 100%;
+    height: 6rem;
 
-  display: flex;
+    display: flex;
+
 }
