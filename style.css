@@ -1,3 +1,9 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
 /* ==== GOOGLE FONTS ====*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
 
@@ -7,6 +13,7 @@
   --body-font: "Roboto", sans-serif;
 
   /* ==== CoLors ====*/
+
 }
 
 :root,
@@ -60,6 +67,7 @@ header {
   color: var(--text-color);
 }
 
+
 .logo {
   color: var(--highlight-color);
   font-size: 3rem;
@@ -78,6 +86,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
 
 .searchBarContainer {
   width: 70%;
@@ -115,6 +124,15 @@ header {
   border: none;
 }
 
+        .searchBar {
+            border: blue solid 2px;
+            width: 80%;
+            height: 3rem;
+
+            display: flex;
+
+        }
+
 .loginContainer {
   width: 20%;
   display: flex;
@@ -145,41 +163,93 @@ header {
 /*MAIN SECTION*/
 
 main {
-  border: rgb(0, 255, 200) solid 2px;
-  width: 100%;
-  /* height: 100vh; */
-  position: relative;
-  display: flex;
-  align-content: space-between;
+
+    border: rgb(0, 255, 200) solid 2px;
+    width: 100%;
+    /* height: 100vh; */
+    position: relative;
+
+    display: flex;
+    align-content: space-between;
 }
 
-.filtersContainer {
-  border: blue solid 2px;
-  width: 25%;
-  height: 100vh;
+.selection-Container {
+    border: rgb(5, 5, 37) solid 2px;
+    width: 25%;
+    height: 100%;
+    
+    position: sticky;
+    top: 0;
+    
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  
 }
 
-.filters {
-  border: black solid 2px;
-  width: 100%;
-  height: 100%;
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
+.selections {
+    border: orange dashed 3px;
 }
 
-li {
-  border: red solid 2px;
-  width: 90%;
-  height: 2rem;
-
-  display: flex;
+.filter,
+.offers,
+.tickets,
+.diet,
+.categories {
+    /* border: black solid 3px; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+
+.filterTitle,
+.offersTitle,
+.ticketsTitle,
+.dietTitle,
+.categoriesTitle {
+    border: red solid 2px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+
+.filter-Ul,
+.offers-Ul,
+.tickets-Ul,
+.diet-Ul,
+.categories-Ul {
+    display: none;
+}
+
+/* .filter:hover .filter-Ul,
+.offers:hover .offers-Ul,
+.tickets:hover .tickets-Ul,
+.diet:hover .diet-Ul,
+.categorys:hover .categorys-Ul {
+    display: block;
+} */
+
+/* ul li {
+    /* position: relative; */
+    /* float: left; */
+
+
+/*ul li a {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    display: block;
+    
+}
+
+ul .filter {
+    border: red solid 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
 
 .foodContainer {
   border: green solid 2px;
@@ -312,21 +382,46 @@ footer {
 
   .burgerMenu {
     display: flex;
-  }
+    
+}
 
-  .loginContainer {
-    display: none;
-  }
 
-  main {
-    width: 100%;
-  }
+@media only screen and (max-width: 600px) {
+    
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .foodContainer {
-    width: 100%;
-  }
+
+    .search-burgerContainer {
+        width: 100%;
+    }
+
+    .burgerMenu {
+        display: flex;
+    }
+
+    .loginContainer {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .foodContainer {
+        width: 100%;
+    }
+
+    ul {
+        display: none;
+    }
 
   .filtersContainer {
     display: none;
   }
 }
+
