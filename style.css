@@ -151,10 +151,9 @@ li {
     border: green solid 2px;
     width: 75%;
     height: 100vh;
-
     display: flex;
-    flex-direction: column;
-    align-content: space-around;
+    flex-wrap: wrap;
+
 
 }
 
