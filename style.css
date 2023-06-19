@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/*HEADER SECTION*/
+
+header {
+    width: 100%;
+
+    display: flex;
+
+}
+
+.logoContainer {
+    border: red solid 2px;
+    width: 20%;
+    height: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    .logo {
+        border: orange dashed 2px;
+        width: 80%;
+        height: 70%;
+
+        display: flex;
+    }
+
+.searchBarContainer {
+    border: red solid 2px;
+    width: 60%;
+    padding-left: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+    .searchBar {
+        border: blue solid 2px;
+        width: 80%;
+        height: 3rem;
+
+        display: flex;
+
+    }
+
+.loginContainer {
+    border: red solid 2px;
+    width: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .login {
+        border: violet dashed 2px;
+        width: 90%;
+        height: 3rem;
+
+        display: flex;
+    }
+
+/*MAIN SECTION*/
+
+main {
+    border: rgb(0, 255, 200) solid 2px;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-content: space-between;
+}
+
+.filtersContainer {
+    border: blue solid 2px;
+    width: 25%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .filters {
+        border: black solid 2px;
+        width: 100%;
+        height: 100%;
+        
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+        li {
+            border: red solid 2px;
+            width: 90%;
+            height: 2rem;
+
+            display: flex;
+        }
+
+.foodContainer {
+    border: green solid 2px;
+    width: 75%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/*FOOTER SECTION*/
+
+footer {
+    border: red solid 2px;
+    width: 100%;
+    height: 6rem;
+
+    display: flex;
+    
+}
