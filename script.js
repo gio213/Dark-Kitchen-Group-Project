@@ -1,3 +1,4 @@
+
 //////////footer ///////////
 //contact Form
 let form = document.getElementsByClassName("contact")[0];
@@ -77,3 +78,4 @@ const openaboutUs= () =>{
     popup.document.close();
   }
 aboutUs.addEventListener("click", openaboutUs);
+
