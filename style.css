@@ -35,7 +35,7 @@ body.dark-theme {
 * {
     padding: 0;
     margin: 0;
-
+    box-sizing: border-box;
 }
 
 body {
@@ -50,7 +50,9 @@ body {
 /*HEADER SECTION*/
 
 header {
+    border: black dashed 2px;
     width: 100%;
+    height: 20%;
 
     display: flex;
 
@@ -74,22 +76,40 @@ header {
     display: flex;
 }
 
-.searchBarContainer {
-    border: red solid 2px;
-    width: 60%;
-    padding-left: 1rem;
-
-    display: flex;
-    align-items: center;
-}
-
-.searchBar {
+.search-burgerContainer {
     border: blue solid 2px;
     width: 80%;
-    height: 3rem;
+    height: 4rem;
 
     display: flex;
 }
+
+
+    .burgerMenu {
+        border: pink solid 3px;
+        width: 20%;
+        height: 4rem;
+
+        display: none;
+    }
+
+    .searchBarContainer {
+        border: red solid 2px;
+        width: 100%;
+        padding-left: 1rem;
+
+        display: flex;
+        align-items: center;
+    }
+
+        .searchBar {
+            border: blue solid 2px;
+            width: 80%;
+            height: 3rem;
+
+            display: flex;
+
+        }
 
 .loginContainer {
     border: red solid 2px;
@@ -113,38 +133,25 @@ header {
 main {
     border: rgb(0, 255, 200) solid 2px;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    position: relative;
 
     display: flex;
     align-content: space-between;
 }
 
-.filtersContainer {
+.selection-Container {
     border: blue solid 2px;
     width: 25%;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.filters {
-    border: black solid 2px;
-    width: 100%;
     height: 100%;
-    list-style: none;
+    
+    position: sticky;
+    top: 0;
+    
 
     display: flex;
     flex-direction: column;
-}
-
-li {
-    border: red solid 2px;
-    width: 90%;
-    height: 2rem;
-
-    display: flex;
+  
 }
 
 .foodContainer {
@@ -226,5 +233,44 @@ footer {
     height: 6rem;
 
     display: flex;
+
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .search-burgerContainer {
+        width: 100%;
+    }
+
+    .burgerMenu {
+        display: flex;
+    }
+
+    .loginContainer {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .foodContainer {
+        width: 100%;
+    }
+
+    .filtersContainer {
+        display: none;
+    }
+
 
 }
