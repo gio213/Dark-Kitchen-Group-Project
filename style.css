@@ -1,71 +1,128 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+/* ==== GOOGLE FONTS ====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+/* ==== VARIABLES CSS ====*/
+:root {
+  /* ==== Font and typography ====*/
+  --body-font: "Roboto", sans-serif;
+
+  /* ==== CoLors ====*/
+
+}
+
+:root,
+:root.light {
+  /* HSL coLor mode */
+  --highlight-color: hsl(180, 100%, 40%);
+  --text-color: hsl(180, 5%, 19%);
+  --search-bar-color: hsl(0, 0%, 96%);
+  --header-footer-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 100%);
+  --tag-color: hsl(4, 62%, 48%);
+  --footer-color: hsl(180, 5%, 19%);
+  --margin-color: rgba(0, 0, 0, 0.08);
+}
+
+:root,
+:root.dark {
+  --highlight-color: hsl(180, 100%, 40%);
+  --search-bar-color: hsl(0, 0%, 93%);
+  --text-color: hsl(0, 0%, 100%);
+  --header-footer-color: #191919;
+  --body-color: #2c2c2c;
+  --tag-color: hsl(4, 62%, 48%);
+  --margin-color: rgba(169, 169, 169, 0.768);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*HEADER SECTION*/
 
 header {
-    border: black dashed 2px;
-    width: 100%;
-    height: 20%;
+  background-color: var(--header-footer-color);
+  font-family: var(--body-font);
+  height: 6rem;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--margin-color);
+  color: var(--text-color);
+}
 
-    display: flex;
 
+.logo {
+  color: var(--highlight-color);
+  font-size: 3rem;
+  width: 80%;
+  height: 70%;
 }
 
 .logoContainer {
-    border: red solid 2px;
-    width: 20%;
-    height: 4rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 20%;
+  height: 4rem;
 }
-    
-    .logo {
-        border: orange dashed 2px;
-        width: 80%;
-        height: 70%;
-
-        display: flex;
-    }
 
 .search-burgerContainer {
-    border: blue solid 2px;
-    width: 80%;
-    height: 4rem;
-
-    display: flex;
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-    .burgerMenu {
-        border: pink solid 3px;
-        width: 20%;
-        height: 4rem;
 
-        display: none;
-    }
+.searchBarContainer {
+  width: 70%;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
 
-    .searchBarContainer {
-        border: red solid 2px;
-        width: 100%;
-        padding-left: 1rem;
+.searchBar {
+  border: none;
+  width: 100%;
+  border-radius: 0.3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.searchBar-icon {
+  padding: 10px;
+  color: var(--highlight-color);
+}
 
-        display: flex;
-        align-items: center;
-    }
+.searchBar i {
+  font-size: 1.3rem;
+  position: absolute;
+}
+
+.input-field {
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  border-radius: 0.3rem;
+  color: var(--text-color);
+  background-color: var(--search-bar-color);
+  border: none;
+}
 
         .searchBar {
             border: blue solid 2px;
@@ -77,25 +134,36 @@ header {
         }
 
 .loginContainer {
-    border: red solid 2px;
-    width: 20%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-    .login {
-        border: violet dashed 2px;
-        width: 90%;
-        height: 3rem;
+.login {
+  border-radius: 0.3rem;
+  border: 2px solid var(--margin-color);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
 
-        display: flex;
-    }
+.login-icon {
+  color: var(--highlight-color);
+  padding-right: 0.5rem;
+}
+
+.burgerMenu {
+  border: pink solid 3px;
+  width: 20%;
+  height: 4rem;
+  display: none;
+}
 
 /*MAIN SECTION*/
 
 main {
+
     border: rgb(0, 255, 200) solid 2px;
     width: 100%;
     /* height: 100vh; */
@@ -183,33 +251,136 @@ ul .filter {
 } */
 
 
-
-    
-
 .foodContainer {
-    border: green solid 2px;
-    width: 75%;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: center;
+  border: green solid 2px;
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
 
+.card {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 10px;
+}
 
+.foodImgDiv {
+  width: 100%;
+  height: 100px;
+  border: 1px solid red;
+}
 
+.namePriceDiv {
+  width: 100%;
+  height: 50px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+}
 
+.name {
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(72, 217, 20);
+}
 
+.price {
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(240, 117, 1);
+}
 
+.tags {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(240, 117, 1);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rating {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(240, 117, 1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rating i {
+  width: 20px;
+  height: 20px;
+}
 
 /*FOOTER SECTION*/
 
 footer {
-    border: red solid 2px;
-    width: 100%;
-    height: 6rem;
+  border: red solid 2px;
 
+  width: 100%;
+  height: 6rem;
+  color: black;
+  display: flex;
+
+  justify-content: space-around;
+  padding-left: 18rem;
+}
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.footerLinks {
+  display: flex;
+}
+.footerLinks p {
+  margin: 0px 1rem;
+}
+.footerSocialMedia {
+  font-size: 20px;
+  color: white;
+}
+.footerSocialMedia a {
+  margin: 0px 1rem;
+}
+.footerRight {
+  font-size: 3rem;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 9rem;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  bottom: -5rem;
+}
+.footerRight a i {
+  color: var(--text-color);
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-burgerContainer {
+    width: 100%;
+  }
+
+  .burgerMenu {
     display: flex;
     
 }
@@ -249,4 +420,8 @@ footer {
         display: none;
     }
 
+  .filtersContainer {
+    display: none;
+  }
 }
+
