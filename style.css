@@ -245,14 +245,14 @@ li {
 footer {
 
     border: red solid 2px;
-
+    color: var(--text-color);
     width: 100%;
     height: 6rem;
     color: black;
     display: flex;
 
     justify-content: space-around;
-    padding-left: 18rem;
+
 }
 .footerLeft{
     display: flex;
@@ -277,7 +277,7 @@ footer {
 .footerRight{
     font-size: 3rem;
     margin-top: 1rem;
-    background-color: white;
+    background-color: var(--highlight-color);
     border-radius: 9rem;
     width: 4rem;
     height: 4rem;
@@ -321,7 +321,17 @@ footer {
         display: none;
     }
 
-
+    footer {
+        border: red solid 2px;
+        height: auto;
+        width: 100%;
+       padding-left: 0;
+        color: black;
+        display: flex;
+    
+        justify-content: space-around;
+        
+    }
 
 }
 
