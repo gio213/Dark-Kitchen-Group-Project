@@ -10,7 +10,9 @@
   --body-font: "Roboto", sans-serif;
 
   /* ==== CoLors ====*/
+}
 
+body.light-theme {
   /* HSL coLor mode */
   --highlight-color: hsl(180, 100%, 40%);
   --text-color: hsl(180, 5%, 19%);
