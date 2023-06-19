@@ -1,7 +1,41 @@
+/* ==== GOOGLE FONTS ====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+/* ==== VARIABLES CSS ====*/
+:root {
+    /* 1rem = 16px */
+    --header-height: 3rem;
+
+    /* ==== Font and typography ====*/
+    --body-font: "Roboto", sans-serif;
+
+    /* ==== CoLors ====*/
+}
+
+body.light-theme {
+    /* HSL coLor mode */
+    --highlight-color: hsl(180, 100%, 40%);
+    --text-color: hsl(180, 5%, 19%);
+    --body-color: hsl(0, 0%, 100%);
+    --tag-color: hsl(4, 62%, 48%);
+}
+
+body.dark-theme {
+    /* ==== CoLors ====*/
+    /* Change favorite coLor */
+    --hue-color: 180;
+
+    /* HSL coLor mode */
+    --highlight-color: hsl(180, 100%, 40%);
+    --text-color: hsl(0, 0%, 100%);
+    --body-color: hsl(180, 4%, 27%);
+    --tag-color: hsl(4, 62%, 48%);
+}
+
 * {
     padding: 0;
     margin: 0;
-
+    box-sizing: border-box;
 }
 
 body {
@@ -16,7 +50,9 @@ body {
 /*HEADER SECTION*/
 
 header {
+    border: black dashed 2px;
     width: 100%;
+    height: 20%;
 
     display: flex;
 
@@ -31,32 +67,49 @@ header {
     justify-content: center;
     align-items: center;
 }
-    
-    .logo {
-        border: orange dashed 2px;
-        width: 80%;
-        height: 70%;
 
-        display: flex;
-    }
-
-.searchBarContainer {
-    border: red solid 2px;
-    width: 60%;
-    padding-left: 1rem;
+.logo {
+    border: orange dashed 2px;
+    width: 80%;
+    height: 70%;
 
     display: flex;
-    align-items: center;
 }
 
-    .searchBar {
-        border: blue solid 2px;
-        width: 80%;
-        height: 3rem;
+.search-burgerContainer {
+    border: blue solid 2px;
+    width: 80%;
+    height: 4rem;
+
+    display: flex;
+}
+
+
+    .burgerMenu {
+        border: pink solid 3px;
+        width: 20%;
+        height: 4rem;
+
+        display: none;
+    }
+
+    .searchBarContainer {
+        border: red solid 2px;
+        width: 100%;
+        padding-left: 1rem;
 
         display: flex;
-
+        align-items: center;
     }
+
+        .searchBar {
+            border: blue solid 2px;
+            width: 80%;
+            height: 3rem;
+
+            display: flex;
+
+        }
 
 .loginContainer {
     border: red solid 2px;
@@ -67,54 +120,39 @@ header {
     align-items: center;
 }
 
-    .login {
-        border: violet dashed 2px;
-        width: 90%;
-        height: 3rem;
+.login {
+    border: violet dashed 2px;
+    width: 90%;
+    height: 3rem;
 
-        display: flex;
-    }
+    display: flex;
+}
 
 /*MAIN SECTION*/
 
 main {
     border: rgb(0, 255, 200) solid 2px;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    position: relative;
 
     display: flex;
     align-content: space-between;
 }
 
-.filtersContainer {
+.selection-Container {
     border: blue solid 2px;
     width: 25%;
-    height: 100vh;
+    height: 100%;
+    
+    position: sticky;
+    top: 0;
+    
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+  
 }
-
-    .filters {
-        border: black solid 2px;
-        width: 100%;
-        height: 100%;
-        
-        list-style: none;
-
-        display: flex;
-        flex-direction: column;
-       
-    }
-
-        li {
-            border: red solid 2px;
-            width: 90%;
-            height: 2rem;
-
-            display: flex;
-        }
 
 .foodContainer {
     border: green solid 2px;
@@ -124,7 +162,62 @@ main {
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    justify-content: center;
+
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.foodImgDiv {
+    width: 100%;
+    height: 100px;
+    border: 1px solid red;
+}
+
+.namePriceDiv {
+    width: 100%;
+    height: 50px;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(72, 217, 20);
+}
+
+.price {
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(240, 117, 1);
+}
+
+.tags {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(240, 117, 1);
+    display: flex;
+    justify-content: flex-start
+}
+
+.rating {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(240, 117, 1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rating i {
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -142,6 +235,7 @@ footer {
     height: 6rem;
     color: black;
     display: flex;
+
     justify-content: space-around;
     padding-left: 18rem;
 }
@@ -173,5 +267,45 @@ footer {
     width: 4rem;
     height: 4rem;
     text-align: center;
+
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .search-burgerContainer {
+        width: 100%;
+    }
+
+    .burgerMenu {
+        display: flex;
+    }
+
+    .loginContainer {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .foodContainer {
+        width: 100%;
+    }
+
+    .filtersContainer {
+        display: none;
+    }
+
+
 
 }
