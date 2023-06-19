@@ -11,8 +11,7 @@ import meals from "./meals.json" assert { type: "json" };
 //     });
 // };
 // fetchJson();
-
-const createCard = (meal) => {
+for (let i = 0; i < meals.length; i++) {
   const card = document.createElement("div");
   card.classList.add("card");
   foodContainer.appendChild(card);
@@ -29,7 +28,7 @@ const createCard = (meal) => {
   nameDiv.classList.add("name");
   namePriceDiv.appendChild(nameDiv);
   const name = document.createElement("h1");
-  namePriceDiv.appendChild(name);
+  nameDiv.appendChild(name);
   const priceDiv = document.createElement("div");
   priceDiv.classList.add("price");
   namePriceDiv.appendChild(priceDiv);
@@ -59,10 +58,32 @@ const createCard = (meal) => {
   star5.classList.add("fa-regular", "fa-star");
   rating.appendChild(star5);
 
-  // give the elements content
-  foodImg.src = meals[0].image;
-};
-console.log(meals);
-for (let i = 0; i < meals.length; i++) {
-  createCard(meals[i]);
+  foodImg.src = meals[i].image;
+  name.textContent = meals[i].name;
+  price.textContent = meals[i].price;
+  tag.textContent = meals[i].tags;
+
+  if (meals[i].rating === 1) {
+    star.classList.add("fa-solid");
+  } else if (meals[i].rating === 2) {
+    star.classList.add("fa-solid");
+    star2.classList.add("fa-solid");
+  } else if (meals[i].rating === 3) {
+    star.classList.add("fa-solid");
+    star2.classList.add("fa-solid");
+    star3.classList.add("fa-solid");
+  } else if (meals[i].rating === 4) {
+    star.classList.add("fa-solid");
+    star2.classList.add("fa-solid");
+    star3.classList.add("fa-solid");
+    star4.classList.add("fa-solid");
+  } else if (meals[i].rating === 5) {
+    star.classList.add("fa-solid");
+    star2.classList.add("fa-solid");
+    star3.classList.add("fa-solid");
+    star4.classList.add("fa-solid");
+    star5.classList.add("fa-solid");
+  }
 }
+
+console.log(meals);
