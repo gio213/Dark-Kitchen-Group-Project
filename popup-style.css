@@ -1,7 +1,10 @@
-form{
+.contact-form{
     display: flex;
     flex-direction: column;
     height: 25rem;
     justify-content: space-around;
     align-items: baseline;
+}
+.form-group{
+    display: flex;
 }

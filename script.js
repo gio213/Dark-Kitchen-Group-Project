@@ -20,7 +20,7 @@ const openForm= () =>{
     </head>
     <body>
   
-      <form class="contact-form" action="submit-form.php" method="POST">
+      <form class="contact-form"  method="POST">
       <h2>Contact Form</h2>
       <div class="form-group">
         <label for="name">Name:</label>
