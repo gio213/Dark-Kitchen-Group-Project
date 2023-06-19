@@ -3,9 +3,6 @@
 
 /* ==== VARIABLES CSS ====*/
 :root {
-  /* 1rem = 16px */
-  --header-height: 4rem;
-
   /* ==== Font and typography ====*/
   --body-font: "Roboto", sans-serif;
 
@@ -18,20 +15,23 @@
   --highlight-color: hsl(180, 100%, 40%);
   --text-color: hsl(180, 5%, 19%);
   --search-bar-color: hsl(0, 0%, 96%);
+  --header-footer-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 100%);
   --tag-color: hsl(4, 62%, 48%);
   --footer-color: hsl(180, 5%, 19%);
+  --margin-color: rgba(0, 0, 0, 0.08);
 }
-/* 
+
 :root,
 :root.dark {
-
   --highlight-color: hsl(180, 100%, 40%);
-  --search-bar-color: hsl(0, 0%, 29%);
+  --search-bar-color: hsl(0, 0%, 93%);
   --text-color: hsl(0, 0%, 100%);
-  --body-color: hsl(180, 4%, 27%);
+  --header-footer-color: #191919;
+  --body-color: #2c2c2c;
   --tag-color: hsl(4, 62%, 48%);
-} */
+  --margin-color: rgba(169, 169, 169, 0.768);
+}
 
 * {
   padding: 0;
@@ -41,7 +41,6 @@
 
 body {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,11 +49,15 @@ body {
 /*HEADER SECTION*/
 
 header {
-  height: var(--header-height);
+  background-color: var(--header-footer-color);
+  font-family: var(--body-font);
+  height: 6rem;
+  padding: 0 1rem;
   width: 100%;
   display: flex;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
-  margin-bottom: 2rem;
+  align-items: center;
+  border-bottom: 2px solid var(--margin-color);
+  color: var(--text-color);
 }
 
 .logo {
@@ -70,54 +73,44 @@ header {
 }
 
 .search-burgerContainer {
-  border: blue solid 2px;
   width: 80%;
   height: 4rem;
-
   display: flex;
-}
-
-.burgerMenu {
-  border: pink solid 3px;
-  width: 20%;
-  height: 4rem;
-
-  display: none;
+  justify-content: space-between;
 }
 
 .searchBarContainer {
-  border: red solid 2px;
-  width: 60%;
+  width: 70%;
   padding-left: 1rem;
-
   display: flex;
   align-items: center;
 }
 
 .searchBar {
   border: none;
-  width: 80%;
+  width: 100%;
   border-radius: 0.3rem;
   height: 3rem;
   display: flex;
+  align-items: center;
   font-size: 1rem;
 }
 .searchBar-icon {
   padding: 10px;
   color: var(--highlight-color);
-  min-width: 50px;
-  text-align: center;
 }
 
 .searchBar i {
+  font-size: 1.3rem;
   position: absolute;
 }
 
 .input-field {
+  font-size: 1.3rem;
   width: 100%;
-  padding: 10px;
-  text-align: center;
+  padding: 1rem 2.5rem;
   border-radius: 0.3rem;
+  color: var(--text-color);
   background-color: var(--search-bar-color);
   border: none;
 }
@@ -130,9 +123,23 @@ header {
 }
 
 .login {
-  width: 90%;
-  height: 3rem;
+  border-radius: 0.3rem;
+  border: 2px solid var(--margin-color);
+  padding: 0.5rem;
   display: flex;
+  align-items: center;
+}
+
+.login-icon {
+  color: var(--highlight-color);
+  padding-right: 0.5rem;
+}
+
+.burgerMenu {
+  border: pink solid 3px;
+  width: 20%;
+  height: 4rem;
+  display: none;
 }
 
 /*MAIN SECTION*/
@@ -142,7 +149,6 @@ main {
   width: 100%;
   /* height: 100vh; */
   position: relative;
-
   display: flex;
   align-content: space-between;
 }
@@ -179,7 +185,6 @@ li {
   border: green solid 2px;
   width: 75%;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -243,85 +248,77 @@ li {
 /*FOOTER SECTION*/
 
 footer {
+  border: red solid 2px;
 
-    border: red solid 2px;
+  width: 100%;
+  height: 6rem;
+  color: black;
+  display: flex;
 
-    width: 100%;
-    height: 6rem;
-    color: black;
-    display: flex;
-
-    justify-content: space-around;
-    padding-left: 18rem;
+  justify-content: space-around;
+  padding-left: 18rem;
 }
-.footerLeft{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-.footerLinks{
-    display: flex;
+.footerLinks {
+  display: flex;
 }
-.footerLinks p{
-    margin: 0px 1rem;
+.footerLinks p {
+  margin: 0px 1rem;
 }
-.footerSocialMedia{
-    font-size: 20px;
-    color: white;
-   
+.footerSocialMedia {
+  font-size: 20px;
+  color: white;
 }
-.footerSocialMedia a{
-    margin: 0px 1rem;
+.footerSocialMedia a {
+  margin: 0px 1rem;
 }
-.footerRight{
-    font-size: 3rem;
-    margin-top: 1rem;
-    background-color: white;
-    border-radius: 9rem;
-    width: 4rem;
-    height: 4rem;
-    text-align: center;
+.footerRight {
+  font-size: 3rem;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 9rem;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
 
   display: flex;
 }
 
-
 @media only screen and (max-width: 600px) {
-    
-    header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  header {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .search-burgerContainer {
+    width: 100%;
+  }
 
-    .search-burgerContainer {
-        width: 100%;
-    }
+  .burgerMenu {
+    display: flex;
+  }
 
-    .burgerMenu {
-        display: flex;
-    }
+  .loginContainer {
+    display: none;
+  }
 
-    .loginContainer {
-        display: none;
-    }
+  main {
+    width: 100%;
+  }
 
-    main {
-        width: 100%;
-    }
+  .foodContainer {
+    width: 100%;
+  }
 
-    .foodContainer {
-        width: 100%;
-    }
-
-    .filtersContainer {
-        display: none;
-    }
-
-
-
+  .filtersContainer {
+    display: none;
+  }
 }
-
