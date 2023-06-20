@@ -1,11 +1,13 @@
 // Giorgi
 const foodContainer = document.querySelector(".foodContainer");
 import meals from "./meals.json" assert { type: "json" };
+
 const themeSwitchBtn = document.getElementById("themeChanger");
 const search = document.querySelector(".input-field");
 // theme change button
+
 const setTheme = (theme) => (document.documentElement.className = theme);
-themeSwitchBtn.checked = false;
+setTheme("light");
 themeSwitchBtn.addEventListener("change", () => {
   if (themeSwitchBtn.checked) {
     setTheme("dark");
@@ -16,83 +18,83 @@ themeSwitchBtn.addEventListener("change", () => {
 });
 
 // creating cards for each meal
+const createCard = (name) => {
+  for (let i = 0; i < meals.length; i++) {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    foodContainer.appendChild(card);
+    const foodImgDiv = document.createElement("div");
+    foodImgDiv.classList.add("foodImgDiv");
+    card.appendChild(foodImgDiv);
+    const foodImg = document.createElement("img");
+    foodImg.classList.add("foodImg");
+    foodImgDiv.appendChild(foodImg);
+    const namePriceDiv = document.createElement("div");
+    namePriceDiv.classList.add("namePriceDiv");
+    card.appendChild(namePriceDiv);
+    const nameDiv = document.createElement("div");
+    nameDiv.classList.add("name");
+    namePriceDiv.appendChild(nameDiv);
+    const name = document.createElement("h1");
+    nameDiv.appendChild(name);
+    const priceDiv = document.createElement("div");
+    priceDiv.classList.add("price");
+    namePriceDiv.appendChild(priceDiv);
+    const price = document.createElement("h1");
+    priceDiv.appendChild(price);
+    const tagDiv = document.createElement("div");
+    tagDiv.classList.add("tags");
+    card.appendChild(tagDiv);
+    const tag = document.createElement("h1");
+    tagDiv.appendChild(tag);
+    const rating = document.createElement("div");
+    rating.classList.add("rating");
+    card.appendChild(rating);
+    const star = document.createElement("i");
+    star.classList.add("fa-regular", "fa-star");
+    rating.appendChild(star);
+    const star2 = document.createElement("i");
+    star2.classList.add("fa-regular", "fa-star");
+    rating.appendChild(star2);
+    const star3 = document.createElement("i");
+    star3.classList.add("fa-regular", "fa-star");
+    rating.appendChild(star3);
+    const star4 = document.createElement("i");
+    star4.classList.add("fa-regular", "fa-star");
+    rating.appendChild(star4);
+    const star5 = document.createElement("i");
+    star5.classList.add("fa-regular", "fa-star");
+    rating.appendChild(star5);
 
-for (let i = 0; i < meals.length; i++) {
-  const card = document.createElement("div");
-  card.classList.add("card");
-  foodContainer.appendChild(card);
-  const foodImgDiv = document.createElement("div");
-  foodImgDiv.classList.add("foodImgDiv");
-  card.appendChild(foodImgDiv);
-  const foodImg = document.createElement("img");
-  foodImg.classList.add("foodImg");
-  foodImgDiv.appendChild(foodImg);
-  const namePriceDiv = document.createElement("div");
-  namePriceDiv.classList.add("namePriceDiv");
-  card.appendChild(namePriceDiv);
-  const nameDiv = document.createElement("div");
-  nameDiv.classList.add("name");
-  namePriceDiv.appendChild(nameDiv);
-  const name = document.createElement("h1");
-  nameDiv.appendChild(name);
-  const priceDiv = document.createElement("div");
-  priceDiv.classList.add("price");
-  namePriceDiv.appendChild(priceDiv);
-  const price = document.createElement("h1");
-  priceDiv.appendChild(price);
-  const tagDiv = document.createElement("div");
-  tagDiv.classList.add("tags");
-  card.appendChild(tagDiv);
-  const tag = document.createElement("h1");
-  tagDiv.appendChild(tag);
-  const rating = document.createElement("div");
-  rating.classList.add("rating");
-  card.appendChild(rating);
-  const star = document.createElement("i");
-  star.classList.add("fa-regular", "fa-star");
-  rating.appendChild(star);
-  const star2 = document.createElement("i");
-  star2.classList.add("fa-regular", "fa-star");
-  rating.appendChild(star2);
-  const star3 = document.createElement("i");
-  star3.classList.add("fa-regular", "fa-star");
-  rating.appendChild(star3);
-  const star4 = document.createElement("i");
-  star4.classList.add("fa-regular", "fa-star");
-  rating.appendChild(star4);
-  const star5 = document.createElement("i");
-  star5.classList.add("fa-regular", "fa-star");
-  rating.appendChild(star5);
+    foodImg.src = meals[i].image;
+    name.textContent = meals[i].name;
+    price.textContent = meals[i].price;
+    tag.textContent = meals[i].tags;
 
-  foodImg.src = meals[i].image;
-  name.textContent = meals[i].name;
-  price.textContent = meals[i].price;
-  tag.textContent = meals[i].tags;
-
-  if (meals[i].rating === 1) {
-    star.classList.add("fa-solid");
-  } else if (meals[i].rating === 2) {
-    star.classList.add("fa-solid");
-    star2.classList.add("fa-solid");
-  } else if (meals[i].rating === 3) {
-    star.classList.add("fa-solid");
-    star2.classList.add("fa-solid");
-    star3.classList.add("fa-solid");
-  } else if (meals[i].rating === 4) {
-    star.classList.add("fa-solid");
-    star2.classList.add("fa-solid");
-    star3.classList.add("fa-solid");
-    star4.classList.add("fa-solid");
-  } else if (meals[i].rating === 5) {
-    star.classList.add("fa-solid");
-    star2.classList.add("fa-solid");
-    star3.classList.add("fa-solid");
-    star4.classList.add("fa-solid");
-    star5.classList.add("fa-solid");
+    if (meals[i].rating === 1) {
+      star.classList.add("fa-solid");
+    } else if (meals[i].rating === 2) {
+      star.classList.add("fa-solid");
+      star2.classList.add("fa-solid");
+    } else if (meals[i].rating === 3) {
+      star.classList.add("fa-solid");
+      star2.classList.add("fa-solid");
+      star3.classList.add("fa-solid");
+    } else if (meals[i].rating === 4) {
+      star.classList.add("fa-solid");
+      star2.classList.add("fa-solid");
+      star3.classList.add("fa-solid");
+      star4.classList.add("fa-solid");
+    } else if (meals[i].rating === 5) {
+      star.classList.add("fa-solid");
+      star2.classList.add("fa-solid");
+      star3.classList.add("fa-solid");
+      star4.classList.add("fa-solid");
+      star5.classList.add("fa-solid");
+    }
   }
-}
-
-console.log(meals);
+};
+createCard(meals);
 
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
@@ -164,6 +166,52 @@ categories.addEventListener("click", (event) => {
     isCategoriesUlActive = true;
   }
 });
+
+let check1 = document.querySelector(".user-login");
+let isCheckActive = false;
+check1.addEventListener("click", () => {
+    
+    if(isCheckActive === true) {
+        console.log("Notactive");
+
+        let basket = document.createElement("div");
+            basket.classList.add(".basket")
+            body.appendChild(basket)
+    } else {
+        console.log("Active");
+    }
+});
+
+
+let italianChecked2 = document.getElementById("italianChecked");
+
+
+
+let italianChecked1 = () => {
+
+    for (let card of foodContainer.children) {
+        for(let tag of document.querySelector(".tags").children) {
+            
+                
+                if(tag.textContent.includes("Italian")) { 
+                    console.log(tag);
+                    card.style.display = "block";
+                  } else {
+                    card.style.display = "none";
+                  }
+            }
+        }
+}
+
+italianChecked2.addEventListener("click", italianChecked1());
+
+  
+
+   
+  
+
+
+
 
 
 //////////footer ///////////
@@ -246,3 +294,26 @@ const openaboutUs = () => {
   popup.document.close();
 };
 aboutUs.addEventListener("click", openaboutUs);
+
+//Research bar algo
+search.addEventListener("keyup", (e) => {
+  const searchString = e.target.value.toLowerCase().replace(/\s/g, '');
+
+  for (let card of foodContainer.children) {
+    const name = card.querySelector(".name h1").textContent.toLowerCase().replace(/\s/g, '');
+
+    if (name.includes(searchString)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  }
+
+  
+});
+
+  
+
+
+
+

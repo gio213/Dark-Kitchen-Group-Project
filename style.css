@@ -3,140 +3,133 @@
 
 /* ==== VARIABLES CSS ====*/
 :root {
-    /* ==== Font and typography ====*/
-    --body-font: "Roboto", sans-serif;
+  /* ==== Font and typography ====*/
+  --body-font: "Roboto", sans-serif;
 
-    /* ==== CoLors ====*/
-
+  /* ==== CoLors ====*/
 }
 
 :root,
 :root.light {
-    /* HSL coLor mode */
-    --highlight-color: hsl(180, 100%, 40%);
-    --text-color: hsl(180, 5%, 19%);
-    --search-bar-color: hsl(0, 0%, 96%);
-    --header-footer-color: hsl(0, 0%, 100%);
-    --body-color: hsl(0, 0%, 100%);
-    --tag-color: hsl(4, 62%, 48%);
-    --footer-color: hsl(180, 5%, 19%);
-    --margin-color: rgba(0, 0, 0, 0.08);
+  /* HSL coLor mode */
+  --highlight-color: hsl(180, 100%, 40%);
+  --text-color: hsl(180, 5%, 19%);
+  --search-bar-color: hsl(0, 0%, 96%);
+  --header-footer-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 100%);
+  --tag-color: hsl(4, 62%, 48%);
+  --footer-color: hsl(180, 5%, 19%);
+  --margin-color: rgba(0, 0, 0, 0.08);
+  --card-color: #fff;
 }
 
 :root,
 :root.dark {
-    --highlight-color: hsl(180, 100%, 40%);
-    --search-bar-color: hsl(0, 0%, 93%);
-    --text-color: hsl(0, 0%, 100%);
-    --header-footer-color: #191919;
-    --body-color: #2c2c2c;
-    --tag-color: hsl(4, 62%, 48%);
-    --margin-color: rgba(169, 169, 169, 0.768);
+  --highlight-color: hsl(180, 100%, 40%);
+  --search-bar-color: hsl(0, 0%, 93%);
+  --text-color: hsl(0, 0%, 100%);
+  --header-footer-color: #191919;
+  --body-color: #2c2c2c;
+  --tag-color: hsl(4, 62%, 48%);
+  --margin-color: rgba(169, 169, 169, 0.768);
 }
 
-
 .themeDiv {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #themeChanger {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    background: url("assets/icon-moon.svg");
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background: url("assets/icon-moon.svg");
 }
 
-
 #themeChanger:checked {
-    background: url("assets/icon-sun.svg");
+  background: url("assets/icon-sun.svg");
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--body-color);
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--body-color);
 }
 
 /*HEADER SECTION*/
 
 header {
-    background-color: var(--header-footer-color);
-    font-family: var(--body-font);
-    height: 6rem;
-    padding: 0 1rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid var(--margin-color);
-    color: var(--text-color);
+  background-color: var(--header-footer-color);
+  font-family: var(--body-font);
+  height: 6rem;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--margin-color);
+  color: var(--text-color);
 }
 
-
 .logo {
-    color: var(--highlight-color);
-    font-size: 3rem;
-    width: 80%;
-    height: 70%;
+  color: var(--highlight-color);
+  font-size: 3rem;
+  width: 80%;
+  height: 70%;
 }
 
 .logoContainer {
-    width: 20%;
-    height: 4rem;
+  width: 20%;
+  height: 4rem;
 }
 
 .search-burgerContainer {
-    width: 80%;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-
 .searchBarContainer {
-    width: 70%;
-    padding-left: 1rem;
-    display: flex;
-    align-items: center;
+  width: 70%;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .searchBar {
-    border: none;
-    width: 100%;
-    border-radius: 0.3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
+  border: none;
+  width: 100%;
+  border-radius: 0.3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
 }
-
 .searchBar-icon {
-    padding: 10px;
-    color: var(--highlight-color);
+  padding: 10px;
+  color: var(--highlight-color);
 }
 
 .searchBar i {
-    font-size: 1.3rem;
-    position: absolute;
+  font-size: 1.3rem;
+  position: absolute;
 }
 
 .input-field {
+
     font-size: 1.3rem;
     width: 100%;
     padding: 1rem 2.5rem;
@@ -152,45 +145,44 @@ header {
     height: 3rem;
     display: flex;
 
+
 }
 
 .loginContainer {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login {
-    border-radius: 0.3rem;
-    border: 2px solid var(--margin-color);
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
+  border-radius: 0.3rem;
+  border: 2px solid var(--margin-color);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .login-icon {
-    color: var(--highlight-color);
-    padding-right: 0.5rem;
+  color: var(--highlight-color);
+  padding-right: 0.5rem;
 }
 
 .burgerMenu {
-    /* border: pink solid 3px; */
-    width: 20%;
-    height: 2rem;
-    display: none;
+  border: pink solid 3px;
+  width: 20%;
+  height: 4rem;
+  display: none;
 }
 
 /*MAIN SECTION*/
 
 main {
-
-    /* border: rgb(0, 255, 200) solid 2px; */
-    width: 100%;
-    /* height: 100vh; */
-    position: relative;
-    display: flex;
-    align-content: space-between;
+  width: 100%;
+  /* height: 100vh; */
+  position: relative;
+  display: flex;
+  align-content: space-between;
 }
 
 ::-webkit-scrollbar {
@@ -212,9 +204,8 @@ main {
 
 
 .selection-Container {
-
     /* border: rgb(5, 5, 37) solid 2px; */
-    width: 25%;
+    width: 30rem;
     height: 30rem;
 
     padding-top: 2rem;
@@ -233,6 +224,7 @@ main {
     /* border: orange dashed 3px; */
    
     padding-left: 2.5rem;
+
 }
 
 .filter,
@@ -240,10 +232,9 @@ main {
 .tickets,
 .diet,
 .categories {
-    /* border: black solid 3px; */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
+  /* border: black solid 3px; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
 }
 
@@ -252,15 +243,13 @@ main {
 .ticketsTitle,
 .dietTitle,
 .categoriesTitle {
-    list-style: none;
-    color: black;
+  list-style: none;
+  color: black;
 
-    list-style: none;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-
+  list-style: none;
+  font-size: 1.5rem;
+  font-family: sans-serif;
 }
-
 
 /* .filter-Ul,
 .offers-Ul,
@@ -281,26 +270,26 @@ main {
 }
 
 a[href] {
-    /* border: red solid 2px; */
-    width: 70%;
-    color: black;
-    text-decoration: none;
+  /* border: red solid 2px; */
+  width: 70%;
+  color: black;
+  text-decoration: none;
 }
 
 input[type="checkbox"] {
-    border: gray solid 3px;
-    width: 1rem;
-    height: 1rem;
+  border: gray solid 3px;
+  width: 1rem;
+  height: 1rem;
 
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 input:checked {
-    border-color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
 }
 
 input:focus {
-    box-shadow: 0 0 3px rgb(0, 0, 0);
+  box-shadow: 0 0 3px rgb(0, 0, 0);
 }
 
 .liParag {
@@ -322,7 +311,6 @@ input:focus {
     /* position: relative; */
 /* float: left; */
 
-
 /*ul li a {
     color: black;
     font-size: 2rem;
@@ -338,213 +326,198 @@ ul .filter {
     flex-direction: column;
 } */
 
-
 .foodContainer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .card {
-    width: 250px;
-    height: 350px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.5s ease-in-out;
-    font-size: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    gap: 10px;
-
-
+  width: 250px;
+  height: 350px;
+  padding: 10px;
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  gap: 10px;
 }
 
 .card:hover {
-    transform: scale(0.9);
-
+  transform: scale(0.9);
 }
 
 .foodImgDiv {
-    width: 100%;
-    height: 150px;
-
+  width: 100%;
+  height: 150px;
 }
 
 .foodImgDiv img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .namePriceDiv {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket {
+    background-color: rgb(175, 36, 36);
+    width: 20rem;
+    height: 10rem;
 }
 
 .name {
-    width: 50%;
-    height: 100%;
-
+  width: 50%;
+  height: 100%;
 }
 
-
-
 .price {
-    width: 50%;
-    height: 100%;
+  width: 50%;
+  height: 100%;
 }
 
 .tags {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .rating {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .rating i {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .fa-solid {
-    color: rgb(255, 255, 0);
+  color: rgb(255, 255, 0);
 }
-
-
-
-
-
 
 /*FOOTER SECTION*/
 
 footer {
-    /* border: red solid 2px; */
-
-    width: 100%;
-    height: 6rem;
-    color: black;
-    display: flex;
-    justify-content: space-around;
-    padding-left: 18rem;
+  width: 100%;
+  height: 6rem;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 18rem;
 }
 
 .footerLeft {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .footerLinks {
-    display: flex;
+  display: flex;
 }
 
 .footerLinks p {
-    margin: 0px 1rem;
+  margin: 0px 1rem;
 }
 
 .footerSocialMedia {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 
 .footerSocialMedia a {
-    margin: 0px 1rem;
+  margin: 0px 1rem;
 }
 
 .footerRight {
-    font-size: 3rem;
-    margin-top: 1rem;
-    background-color: white;
-    border-radius: 9rem;
-    width: 4rem;
-    height: 4rem;
-    text-align: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 9rem;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 1rem;
-    bottom: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  bottom: -5rem;
 }
 
 .footerRight a i {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 @media only screen and (max-width: 600px) {
+  header {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-burgerContainer {
+    width: 100%;
+  }
+
+  .burgerMenu {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 600px) {
     header {
-        height: 10rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .search-burgerContainer {
-        width: 100%;
+      width: 100%;
     }
 
     .burgerMenu {
-        display: flex;
-
+      display: flex;
     }
 
-
-    @media only screen and (max-width: 600px) {
-
-        header {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-
-        .search-burgerContainer {
-            width: 100%;
-        }
-
-        .burgerMenu {
-            display: flex;
-        }
-
-        .loginContainer {
-            display: none;
-        }
-
-        main {
-            width: 100%;
-        }
-
-        .foodContainer {
-            width: 100%;
-        }
-
-        ul {
-            display: none;
-        }
-
-
-        .filtersContainer {
-            display: none;
-        }
+    .loginContainer {
+      display: none;
     }
 
+    main {
+      width: 100%;
+    }
 
+    .foodContainer {
+      width: 100%;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .filtersContainer {
+      display: none;
+    }
+  }
 }
