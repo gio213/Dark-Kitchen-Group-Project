@@ -54,6 +54,7 @@
 }
 
 #themeChanger:checked {
+  background-color: black;
   background: url("assets/icon-sun.svg");
 }
 
@@ -88,13 +89,14 @@ header {
 .logo {
   color: var(--highlight-color);
   font-size: 3rem;
-  width: 80%;
-  height: 70%;
 }
 
 .logoContainer {
   width: 20%;
-  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .search-burgerContainer {
@@ -181,10 +183,8 @@ main {
   border: rgb(5, 5, 37) solid 2px;
   width: 25%;
   height: 100%;
-
   position: sticky;
   top: 0;
-
   display: flex;
   flex-direction: column;
 }
@@ -212,7 +212,6 @@ main {
 .categoriesTitle {
   list-style: none;
   color: black;
-
   list-style: none;
   font-size: 1.5rem;
   font-family: sans-serif;
@@ -411,9 +410,8 @@ footer {
 }
 
 .footerRight {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 1rem;
-  background-color: white;
   border-radius: 9rem;
   width: 4rem;
   height: 4rem;
@@ -423,7 +421,7 @@ footer {
   justify-content: center;
   position: absolute;
   right: 1rem;
-  bottom: -5rem;
+  bottom: 4rem;
 }
 
 .footerRight a i {
@@ -439,6 +437,16 @@ footer {
     align-items: center;
   }
 
+  .themeDiv {
+    position: absolute;
+    top: 13px;
+    right: 11px;
+  }
+
+  .logoContainer {
+    width: 100%;
+  }
+
   .search-burgerContainer {
     width: 100%;
   }
@@ -447,40 +455,23 @@ footer {
     display: flex;
   }
 
-  @media only screen and (max-width: 600px) {
-    header {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .loginContainer {
+    display: none;
+  }
 
-    .search-burgerContainer {
-      width: 100%;
-    }
+  main {
+    width: 100%;
+  }
 
-    .burgerMenu {
-      display: flex;
-    }
+  .foodContainer {
+    width: 100%;
+  }
 
-    .loginContainer {
-      display: none;
-    }
+  ul {
+    display: none;
+  }
 
-    main {
-      width: 100%;
-    }
-
-    .foodContainer {
-      width: 100%;
-    }
-
-    ul {
-      display: none;
-    }
-
-    .filtersContainer {
-      display: none;
-    }
+  .filtersContainer {
+    display: none;
   }
 }
