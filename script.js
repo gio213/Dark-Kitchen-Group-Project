@@ -1,4 +1,6 @@
 // Giorgi
+const shoppingBasket = document.querySelector(".shoppingBasket img");
+
 const foodContainer = document.querySelector(".foodContainer");
 import meals from "./meals.json" assert { type: "json" };
 
@@ -17,8 +19,10 @@ themeSwitchBtn.addEventListener("change", () => {
   }
 });
 
+let shoppingCart = [];
+let totalPrice = 0;
 // creating cards for each meal
-const createCard = (name) => {
+const createCard = () => {
   for (let i = 0; i < meals.length; i++) {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -45,7 +49,13 @@ const createCard = (name) => {
     const tagDiv = document.createElement("div");
     tagDiv.classList.add("tags");
     card.appendChild(tagDiv);
-    const tag = document.createElement("h1");
+    const categoryDiv = document.createElement("div");
+    categoryDiv.classList.add("category");
+    card.appendChild(categoryDiv);
+    const category = document.createElement("h1");
+    categoryDiv.appendChild(category);
+    category.textContent = ` Category: ${meals[i].category}`;
+    const tag = document.createElement("p");
     tagDiv.appendChild(tag);
     const rating = document.createElement("div");
     rating.classList.add("rating");
@@ -64,11 +74,21 @@ const createCard = (name) => {
     rating.appendChild(star4);
     const star5 = document.createElement("i");
     star5.classList.add("fa-regular", "fa-star");
-    rating.appendChild(star5);
+    const starDiv = document.createElement("div");
+    starDiv.classList.add("starDiv");
+    starDiv.appendChild(star);
+    starDiv.appendChild(star2);
+    starDiv.appendChild(star3);
+    starDiv.appendChild(star4);
+    starDiv.appendChild(star5);
+    rating.appendChild(starDiv);
+    const addTocardOmg = document.createElement("div");
+    addTocardOmg.classList.add("addTocardOmg");
+    rating.appendChild(addTocardOmg);
 
     foodImg.src = meals[i].image;
     name.textContent = meals[i].name;
-    price.textContent = meals[i].price;
+    price.textContent = `${meals[i].price} €`;
     tag.textContent = meals[i].tags;
 
     if (meals[i].rating === 1) {
@@ -92,7 +112,22 @@ const createCard = (name) => {
       star4.classList.add("fa-solid");
       star5.classList.add("fa-solid");
     }
+
+    // adding to cart, total price, and cart array
+    card.addEventListener("click", (e) => {
+      console.log(e.target);
+      if (e.target.classList.contains("addTocardOmg")) {
+        shoppingCart.push(meals[i].name + " " + meals[i].price + " €");
+        totalPrice += meals[i].price;
+        console.log(totalPrice);
+      }
+      console.log(shoppingCart);
+    });
   }
+  shoppingBasket.addEventListener("click", () => {
+    console.log(totalPrice);
+    console.log(shoppingCart);
+  });
 };
 createCard(meals);
 
