@@ -216,7 +216,6 @@ main {
 .categoriesTitle {
   list-style: none;
   color: black;
-
   list-style: none;
   font-size: 1.5rem;
   font-family: sans-serif;
@@ -446,9 +445,8 @@ footer {
 }
 
 .footerRight {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 1rem;
-  background-color: white;
   border-radius: 9rem;
   width: 4rem;
   height: 4rem;
@@ -458,7 +456,7 @@ footer {
   justify-content: center;
   position: absolute;
   right: 1rem;
-  bottom: -5rem;
+  bottom: 4rem;
 }
 
 .footerRight a i {
@@ -473,11 +471,14 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
+  
   #themeChanger {
     position: absolute;
     top: 20px;
     right: 20px;
+
+  .logoContainer {
+    width: 100%;
   }
 
   .search-burgerContainer {
@@ -486,10 +487,6 @@ footer {
 
   .burgerMenu {
     display: flex;
-  }
-
-  .loginContainer {
-    display: none;
   }
 
   main {
@@ -507,4 +504,4 @@ footer {
   .filtersContainer {
     display: none;
   }
-}
+ }
