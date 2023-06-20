@@ -1,12 +1,20 @@
 // Giorgi
-const shoppingBasket = document.querySelector(".shoppingBasket img");
-
+const shoppingBasket = document.querySelector(".shoppingBasket input");
+const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
-import meals from "./meals.json" assert { type: "json" };
-
-const themeSwitchBtn = document.getElementById("themeChanger");
 const search = document.querySelector(".input-field");
+import meals from "./meals.json" assert { type: "json" };
+// creating basket container
+const cartProductsContainer = document.createElement("div");
+cartProductsContainer.classList.add("cartProductsContainer");
+header.appendChild(cartProductsContainer);
+const listOl = document.createElement("ol");
+cartProductsContainer.appendChild(listOl);
+const total = document.createElement("h5");
+cartProductsContainer.appendChild(total);
+
 // theme change button
+const themeSwitchBtn = document.getElementById("themeChanger");
 
 const setTheme = (theme) => (document.documentElement.className = theme);
 setTheme("light");
@@ -122,14 +130,28 @@ const createCard = () => {
         console.log(totalPrice);
       }
       console.log(shoppingCart);
+      const listLi = document.createElement("li");
+      const liDiv = document.createElement("div");
+      const liDivTxt = document.createElement("h6");
+      liDiv.appendChild(liDivTxt);
+      listLi.appendChild(liDiv);
+      listOl.appendChild(listLi);
+      liDivTxt.textContent = shoppingCart[shoppingCart.length - 1];
+      total.textContent = `Total: ${totalPrice} €`;
     });
   }
-  shoppingBasket.addEventListener("click", () => {
-    console.log(totalPrice);
-    console.log(shoppingCart);
-  });
 };
+
 createCard(meals);
+
+shoppingBasket.addEventListener("click", () => {
+  if (shoppingBasket.checked) {
+    cartProductsContainer.style.visibility = "visible";
+  }
+  if (!shoppingBasket.checked) {
+    cartProductsContainer.style.visibility = "hidden";
+  }
+});
 
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
@@ -285,10 +307,13 @@ aboutUs.addEventListener("click", openaboutUs);
 
 //Research bar algo
 search.addEventListener("keyup", (e) => {
-  const searchString = e.target.value.toLowerCase().replace(/\s/g, '');
+  const searchString = e.target.value.toLowerCase().replace(/\s/g, "");
 
   for (let card of foodContainer.children) {
-    const name = card.querySelector(".name h1").textContent.toLowerCase().replace(/\s/g, '');
+    const name = card
+      .querySelector(".name h1")
+      .textContent.toLowerCase()
+      .replace(/\s/g, "");
 
     if (name.includes(searchString)) {
       card.style.display = "block";
@@ -296,12 +321,4 @@ search.addEventListener("keyup", (e) => {
       card.style.display = "none";
     }
   }
-
-  
 });
-
-  
-
-
-
-
