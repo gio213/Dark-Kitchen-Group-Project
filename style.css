@@ -189,7 +189,7 @@ main {
 
 .selections {
     /* border: orange dashed 3px; */
-
+   
     padding-left: 2.5rem;
 }
 
@@ -201,7 +201,7 @@ main {
     /* border: black solid 3px; */
     padding-top: 1rem;
     padding-bottom: 1rem;
-   
+    
 }
 
 .filterTitle,
@@ -230,7 +230,7 @@ main {
 
 .li {
     /* border: red solid 2px; */
-    width: 59%;
+    width: 79%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: flex;
@@ -258,6 +258,13 @@ input:checked {
 
 input:focus {
     box-shadow: 0 0 3px rgb(0, 0, 0);
+}
+
+.liParag {
+    /* border: black solid 2px; */
+    width: 70%;
+    
+    display: flex;
 }
 
 /* .filter:hover .filter-Ul,
