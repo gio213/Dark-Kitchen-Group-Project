@@ -37,8 +37,6 @@
 }
 
 .themeDiv {
-    width: 30px;
-    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +72,6 @@ body {
     justify-content: center;
     background-color: var(--body-color);
     transition: background-color 0.5s ease;
-
 }
 
 /*HEADER SECTION*/
@@ -99,7 +96,6 @@ header {
 }
 
 .logoContainer {
-    width: 20%;
     height: 4rem;
 }
 
@@ -220,7 +216,6 @@ main {
 .categoriesTitle {
     list-style: none;
     color: black;
-
     list-style: none;
     font-size: 1.5rem;
     font-family: sans-serif;
@@ -356,14 +351,12 @@ ul .filter {
 .foodImgDiv {
     width: 100%;
     height: 200px;
-
 }
 
 .foodImgDiv img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .namePriceDiv {
@@ -376,7 +369,6 @@ ul .filter {
 .name {
     width: 70%;
     height: 100%;
-
 }
 
 .price {
@@ -406,26 +398,17 @@ ul .filter {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-
 }
-
-
 
 .shoppingBasket {
-    width: 25px;
-    height: 25px;
+    display: flex;
+    align-items: center;
 }
 
-.shoppingBasket input {
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    border: none;
+.shoppingBasket img {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
-    background-image: url(assets/basket-shopping);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 }
 
 .addTocardOmg {
@@ -438,16 +421,7 @@ ul .filter {
     background-size: contain;
     background-position: center;
     cursor: pointer;
-
-
-
 }
-
-
-
-
-
-
 
 .rating i {
     width: 20px;
@@ -504,9 +478,8 @@ footer {
 }
 
 .footerRight {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1rem;
-    background-color: white;
     border-radius: 9rem;
     width: 4rem;
     height: 4rem;
@@ -516,7 +489,7 @@ footer {
     justify-content: center;
     position: absolute;
     right: 1rem;
-    bottom: -5rem;
+    bottom: 4rem;
 }
 
 .footerRight a i {
@@ -537,44 +510,27 @@ footer {
         width: 100%;
     }
 
+    .search-burgerContainer {
+        width: 100%;
+    }
+
     .burgerMenu {
         display: flex;
     }
 
-    @media only screen and (max-width: 600px) {
-        header {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    main {
+        width: 100%;
+    }
 
-        .search-burgerContainer {
-            width: 100%;
-        }
+    .foodContainer {
+        width: 100%;
+    }
 
-        .burgerMenu {
-            display: flex;
-        }
+    ul {
+        display: none;
+    }
 
-        .loginContainer {
-            display: none;
-        }
-
-        main {
-            width: 100%;
-        }
-
-        .foodContainer {
-            width: 100%;
-        }
-
-        ul {
-            display: none;
-        }
-
-        .filtersContainer {
-            display: none;
-        }
+    .filtersContainer {
+        display: none;
     }
 }
