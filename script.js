@@ -16,6 +16,7 @@ themeSwitchBtn.addEventListener("change", () => {
 });
 
 // creating cards for each meal
+
 for (let i = 0; i < meals.length; i++) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -90,8 +91,6 @@ for (let i = 0; i < meals.length; i++) {
     star5.classList.add("fa-solid");
   }
 }
-
-console.log(meals);
 
 //////////footer ///////////
 //contact Form
