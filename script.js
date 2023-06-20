@@ -16,6 +16,7 @@ themeSwitchBtn.addEventListener("change", () => {
 });
 
 // creating cards for each meal
+
 for (let i = 0; i < meals.length; i++) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -96,7 +97,7 @@ console.log(meals);
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
 let offers = document.querySelector(".offersTitle");
-let offersUl = document.querySelector(".offers-Ul")
+let offersUl = document.querySelector(".offers-Ul");
 let tickets = document.querySelector(".ticketsTitle");
 let ticketsUl = document.querySelector(".tickets-Ul");
 let diet = document.querySelector(".dietTitle");
@@ -109,65 +110,60 @@ let isTicketsUlActive = true;
 let isDietUlActive = true;
 let isCategoriesUlActive = true;
 
-
-
 filter.addEventListener("click", (event) => {
-    event.preventDefault();
-    if(isFilterUlActive) {
-        filterUl.style = `display: none`;
-        isFilterUlActive = false;
-    } else {
-        filterUl.style.display = "block";
-        isFilterUlActive = true;
-    }
-    
-})
+  event.preventDefault();
+  if (isFilterUlActive) {
+    filterUl.style = `display: none`;
+    isFilterUlActive = false;
+  } else {
+    filterUl.style.display = "block";
+    isFilterUlActive = true;
+  }
+});
 
 offers.addEventListener("click", (event) => {
-    event.preventDefault();
-    if(isOffersUlActive) {
-        offersUl.style = `display: none`;
-        isOffersUlActive = false;
-    } else {
-        offersUl.style.display = "block";
-        isOffersUlActive = true;
-    }
-})
-
+  event.preventDefault();
+  if (isOffersUlActive) {
+    offersUl.style = `display: none`;
+    isOffersUlActive = false;
+  } else {
+    offersUl.style.display = "block";
+    isOffersUlActive = true;
+  }
+});
 
 tickets.addEventListener("click", (event) => {
-    event.preventDefault();
-    if(isTicketsUlActive) {
-        ticketsUl.style = `display: none`;
-        isTicketsUlActive = false;
-    } else {
-        ticketsUl.style.display = "block";
-        isTicketsUlActive = true;
-    }
-})
+  event.preventDefault();
+  if (isTicketsUlActive) {
+    ticketsUl.style = `display: none`;
+    isTicketsUlActive = false;
+  } else {
+    ticketsUl.style.display = "block";
+    isTicketsUlActive = true;
+  }
+});
 
 diet.addEventListener("click", (event) => {
-    event.preventDefault();
-    if(isDietUlActive) {
-        dietUl.style = `display: none`;
-        isDietUlActive = false;
-    } else {
-        dietUl.style.display = "block";
-        isDietUlActive = true;
-    }
-})
+  event.preventDefault();
+  if (isDietUlActive) {
+    dietUl.style = `display: none`;
+    isDietUlActive = false;
+  } else {
+    dietUl.style.display = "block";
+    isDietUlActive = true;
+  }
+});
 
 categories.addEventListener("click", (event) => {
-    event.preventDefault();
-    if(isCategoriesUlActive) {
-        categoriesUl.style = `display: none`;
-        isCategoriesUlActive = false;
-    } else {
-        categoriesUl.style.display = "block";
-        isCategoriesUlActive = true;
-    }
-})
-
+  event.preventDefault();
+  if (isCategoriesUlActive) {
+    categoriesUl.style = `display: none`;
+    isCategoriesUlActive = false;
+  } else {
+    categoriesUl.style.display = "block";
+    isCategoriesUlActive = true;
+  }
+});
 
 //////////footer ///////////
 //contact Form
@@ -249,4 +245,3 @@ const openaboutUs = () => {
   popup.document.close();
 };
 aboutUs.addEventListener("click", openaboutUs);
-
