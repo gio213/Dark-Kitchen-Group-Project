@@ -190,7 +190,7 @@ const openForm = () => {
     <div class="logo"></div>
     <h1 id="form-title">Contact Form</h1>
     </div>
-      <form class="contact-form"  method="POST">
+      <form class="contact-form" action="/submit"  method="POST">
 
       <div class="form-group">
         <label for="name" value="name">Name:</label>
@@ -210,6 +210,7 @@ const openForm = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
+   
     </body>
     </html>
     `;
@@ -264,8 +265,45 @@ search.addEventListener("keyup", (e) => {
 
   
 });
+//italian checkbox
+let italianChecked2 = document.getElementById("italianChecked");
+let italy =(checkbox,categ)=>{
+  console.log(checkbox)
+  for (let card of foodContainer.children) {
+    const tags = card.querySelector(".tags");
+    for (let tag of tags.children) {
+      if(checkbox.children[0].checked==true){
+        if (tag.textContent.includes(categ)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      }else{
+        card.style.display = "block";
+      }
+   }
+  }};
 
-  
+  /* 
+italianChecked2.addEventListener("click", () => italy(italianChecked2,"Italian")) */
+
+
+//loop give id to each checkbox
+ let categoriesLi = document.querySelector(".categories-Ul");
+for(let i of categoriesLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.id);
+  console.log(country)
+  country.addEventListener("click", () => italy(i,i.id))
+} 
+
+
+// boucle checkbox 
+
+/*for(let i of categoriesLi.children){
+  console.log(i.textContent);// return italian or mexican
+}*/
 
 
 
