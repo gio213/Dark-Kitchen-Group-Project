@@ -222,8 +222,8 @@ const openForm = () => {
     </head>
     <body>
     <div>
-    <div "class=logo"></div>
-    <h1>Contact Form</h1>
+    <div class="logo"></div>
+    <h1 id="form-title">Contact Form</h1>
     </div>
       <form class="contact-form"  method="POST">
 
@@ -240,7 +240,7 @@ const openForm = () => {
         <input type="tel" id="phone" name="phone" required>
       </div>
       <div class="form-group">
-        <label for="message">Message:</label>
+        <label id="message-label" for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
       </div>
       <button type="submit">Submit</button>
@@ -282,3 +282,26 @@ const openaboutUs = () => {
   popup.document.close();
 };
 aboutUs.addEventListener("click", openaboutUs);
+
+//Research bar algo
+search.addEventListener("keyup", (e) => {
+  const searchString = e.target.value.toLowerCase().replace(/\s/g, '');
+
+  for (let card of foodContainer.children) {
+    const name = card.querySelector(".name h1").textContent.toLowerCase().replace(/\s/g, '');
+
+    if (name.includes(searchString)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  }
+
+  
+});
+
+  
+
+
+
+

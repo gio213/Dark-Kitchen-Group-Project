@@ -7,13 +7,13 @@
     --body-font: "Roboto", sans-serif;
 
     /* ==== CoLors ====*/
-
 }
 
 :root,
 :root.light {
     /* HSL coLor mode */
-    --highlight-color: hsl(180, 100%, 40%);
+    --highlight-color: hsl(180, 90%, 27%);
+    --highlight-color-hover: hsl(180, 100%, 40%);
     --text-color: hsl(180, 5%, 19%);
     --search-bar-color: hsl(0, 0%, 96%);
     --header-footer-color: hsl(0, 0%, 100%);
@@ -22,45 +22,36 @@
     --footer-color: hsl(180, 5%, 19%);
     --margin-color: rgba(0, 0, 0, 0.08);
     --card-color: #fff;
-    ;
 }
 
 :root,
 :root.dark {
-    --highlight-color: hsl(180, 100%, 40%);
+    --highlight-color: hsl(180, 90%, 27%);
+    --highlight-color-hover: hsl(180, 100%, 40%);
     --search-bar-color: hsl(0, 0%, 93%);
     --text-color: hsl(0, 0%, 100%);
     --header-footer-color: #191919;
     --body-color: #2c2c2c;
     --tag-color: hsl(4, 62%, 48%);
     --margin-color: rgba(169, 169, 169, 0.768);
-    --card-color: #fff
 }
 
-
 .themeDiv {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
-
-
 }
 
 #themeChanger {
     appearance: none;
-    width: 100%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     border: none;
     cursor: pointer;
     background: url("assets/icon-moon.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
-
 
 #themeChanger:checked {
     border: none;
@@ -100,7 +91,6 @@ header {
     color: var(--text-color);
 }
 
-
 .logo {
     color: var(--highlight-color);
     font-size: 3rem;
@@ -119,7 +109,6 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
 
 .searchBarContainer {
     width: 70%;
@@ -140,10 +129,7 @@ header {
 
 .searchBar-icon {
     padding: 10px;
-    color: var(--highlight-color);
-}
-
-.searchBar i {
+    color: var(--highlight-color) !important;
     font-size: 1.3rem;
     position: absolute;
 }
@@ -156,14 +142,6 @@ header {
     color: var(--text-color);
     background-color: var(--search-bar-color);
     border: none;
-}
-
-.searchBar {
-    border: blue solid 2px;
-    width: 80%;
-    height: 3rem;
-    display: flex;
-
 }
 
 .loginContainer {
@@ -181,6 +159,10 @@ header {
     align-items: center;
 }
 
+.login:hover {
+    background-color: var(--highlight-color-hover);
+}
+
 .login-icon {
     color: var(--highlight-color);
     padding-right: 0.5rem;
@@ -196,8 +178,6 @@ header {
 /*MAIN SECTION*/
 
 main {
-
-    border: rgb(0, 255, 200) solid 2px;
     width: 100%;
     /* height: 100vh; */
     position: relative;
@@ -206,7 +186,6 @@ main {
 }
 
 .selection-Container {
-
     border: rgb(5, 5, 37) solid 2px;
     width: 25%;
     height: 100%;
@@ -214,10 +193,8 @@ main {
     position: sticky;
     top: 0;
 
-
     display: flex;
     flex-direction: column;
-
 }
 
 .selections {
@@ -234,7 +211,6 @@ main {
     /* border: black solid 3px; */
     padding-top: 1rem;
     padding-bottom: 1rem;
-
 }
 
 .filterTitle,
@@ -248,9 +224,7 @@ main {
     list-style: none;
     font-size: 1.5rem;
     font-family: sans-serif;
-
 }
-
 
 /* .filter-Ul,
 .offers-Ul,
@@ -305,7 +279,6 @@ input:focus {
     /* position: relative; */
 /* float: left; */
 
-
 /*ul li a {
     color: black;
     font-size: 2rem;
@@ -321,14 +294,12 @@ ul .filter {
     flex-direction: column;
 } */
 
-
 .foodContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
-    justify-content: center;
 }
 
 .card {
@@ -343,13 +314,10 @@ ul .filter {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     gap: 10px;
-
-
 }
 
 .card:hover {
     transform: scale(0.9);
-
 }
 
 .foodImgDiv {
@@ -378,11 +346,10 @@ ul .filter {
 
 }
 
-
-
 .price {
     width: 25%;
     height: 100%;
+    color: var(--highlight-color);
 }
 
 .tags {
@@ -444,31 +411,25 @@ ul .filter {
 
 
 .rating i {
-    width: 20%;
-    height: 20%;
-
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
 }
 
 .fa-solid {
-    color: rgb(255, 255, 0);
+    font-size: 0.8rem;
+    color: gold;
 }
-
-
-
-
-
 
 /*FOOTER SECTION*/
 
 footer {
-    border: red solid 2px;
-
     width: 100%;
-    height: 6rem;
-    color: black;
+    color: var(--text-color);
     display: flex;
     justify-content: space-around;
-    padding-left: 18rem;
+    padding: 1rem;
+    border-top: 2px solid var(--margin-color);
 }
 
 .footerLeft {
@@ -484,15 +445,23 @@ footer {
 
 .footerLinks p {
     margin: 0px 1rem;
+    padding-bottom: 1rem;
+}
+
+.footerLinks p:hover {
+    color: var(--highlight-color);
+    margin: 0px 1rem;
 }
 
 .footerSocialMedia {
+    padding-top: 1rem;
     font-size: 20px;
     color: white;
 }
 
 .footerSocialMedia a {
     margin: 0px 1rem;
+    color: var(--highlight-color);
 }
 
 .footerRight {
@@ -503,7 +472,6 @@ footer {
     width: 4rem;
     height: 4rem;
     text-align: center;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -531,19 +499,15 @@ footer {
 
     .burgerMenu {
         display: flex;
-
     }
 
-
     @media only screen and (max-width: 600px) {
-
         header {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
 
         .search-burgerContainer {
             width: 100%;
@@ -569,11 +533,8 @@ footer {
             display: none;
         }
 
-
         .filtersContainer {
             display: none;
         }
     }
-
-
 }
