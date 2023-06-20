@@ -1,40 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kitchen</title>
+  </head>
+  <body>
     <header>
+      <div class="logoContainer">
+        <div class="logo">Kitchen</div>
+      </div>
+      <div class="search-burgerContainer">
 
-        <div class="logoContainer">
-            <div class="logo">
-                <p>logo</p>
-            </div>
+        <div class="burgerMenu">
+
         </div>
-
-        <div class="search-burgerContainer">
-
-            <div class="burgerMenu">
-
-            </div>
-            <div class="searchBarContainer">
-
-                <div class="searchBar">
-
-                </div>
-            </div>
-            <div class="loginContainer">
-                <div class="login">
-                    <p>login</p>
-                </div>
-            </div>
+      <div class="searchBarContainer">
+        <div class="searchBar">
+          <i class="fa-solid fa-magnifying-glass searchBar-icon"></i>
+          <input class="input-field" type="text" placeholder="Meals" />
         </div>
-        
+      </div>
+      <div class="loginContainer">
+        <div class="login">
+          <i class="fa-regular fa-user login-icon"></i>
+          <p class="user-login">Sign up or log in</p>
+
+        </div>
+      </div>
+
+      
+      </div>
+   
     </header>
 
     <main>
@@ -105,16 +110,64 @@
         </div>
 
         <div class="foodContainer">
+            <div class="card">
+                <div class="foodImgDiv">
+                    <img src="" alt="">
+                </div>
+                <div class="namePriceDiv">
+                    <div class="name">
+                        <h1>name</h1>
+                    </div>
+                    <div class="price">
+                        <h1>price</h1>
+                    </div>
+                </div>
+                <div class="tags">
+                    <h1>
+                        <span>tag</span>
+
+                    </h1>
+                </div>
+                <div class="rating">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
 
 
+            </div>
         </div>
-
+      </div>
     </main>
+
 
     <footer>
 
+        <div class="footerLeft">
+
+            <div class="footerLinks">
+                <p class="aboutUs" >About Us
+
+                </p>
+                <p class="contact" >Contact 
+                    
+                </p>
+            </div>
+            <p>Copyright © 2023 | All rights reserved</p>
+            <div class="footerSocialMedia">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footerRight">
+            <a href="#header"> <i class="fas fa-chevron-up" ></i></a>
+        </div>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
