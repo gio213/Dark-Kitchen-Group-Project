@@ -21,6 +21,8 @@
     --tag-color: hsl(4, 62%, 48%);
     --footer-color: hsl(180, 5%, 19%);
     --margin-color: rgba(0, 0, 0, 0.08);
+    --card-color: #fff;
+    ;
 }
 
 :root,
@@ -32,6 +34,7 @@
     --body-color: #2c2c2c;
     --tag-color: hsl(4, 62%, 48%);
     --margin-color: rgba(169, 169, 169, 0.768);
+    --card-color: #fff
 }
 
 
@@ -330,6 +333,7 @@ ul .filter {
     width: 250px;
     height: 350px;
     padding: 10px;
+    background-color: var(--card-color);
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease-in-out;
