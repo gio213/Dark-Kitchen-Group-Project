@@ -166,12 +166,6 @@ categories.addEventListener("click", (event) => {
 });
 
 
-//Checking the quantities//
-
-// if(xxx.contains("name")) {
-//     .name
-// }
-
 //////////footer ///////////
 //contact Form
 let form = document.getElementsByClassName("contact")[0];
