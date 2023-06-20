@@ -9,11 +9,12 @@ let diet = document.querySelector(".dietTitle");
 let dietUl = document.querySelector(".diet-Ul");
 let categories = document.querySelector(".categoriesTitle");
 let categoriesUl = document.querySelector(".categories-Ul");
-let isFilterUlActive = false;
+let isFilterUlActive = true;
+let isOffersUlActive = true;
+let isTicketsUlActive = true;
+let isDietUlActive = true;
+let isCategoriesUlActive = true;
 
-// let addEventsCLick = (event) => {
-    
-// }
 
 
 filter.addEventListener("click", (event) => {
@@ -30,46 +31,46 @@ filter.addEventListener("click", (event) => {
 
 offers.addEventListener("click", (event) => {
     event.preventDefault();
-    if(isFilterUlActive) {
+    if(isOffersUlActive) {
         offersUl.style = `display: none`;
-        isFilterUlActive = false;
+        isOffersUlActive = false;
     } else {
         offersUl.style.display = "block";
-        isFilterUlActive = true;
+        isOffersUlActive = true;
     }
 })
 
 
 tickets.addEventListener("click", (event) => {
     event.preventDefault();
-    if(isFilterUlActive) {
+    if(isTicketsUlActive) {
         ticketsUl.style = `display: none`;
-        isFilterUlActive = false;
+        isTicketsUlActive = false;
     } else {
         ticketsUl.style.display = "block";
-        isFilterUlActive = true;
+        isTicketsUlActive = true;
     }
 })
 
 diet.addEventListener("click", (event) => {
     event.preventDefault();
-    if(isFilterUlActive) {
+    if(isDietUlActive) {
         dietUl.style = `display: none`;
-        isFilterUlActive = false;
+        isDietUlActive = false;
     } else {
         dietUl.style.display = "block";
-        isFilterUlActive = true;
+        isDietUlActive = true;
     }
 })
 
 categories.addEventListener("click", (event) => {
     event.preventDefault();
-    if(isFilterUlActive) {
+    if(isCategoriesUlActive) {
         categoriesUl.style = `display: none`;
-        isFilterUlActive = false;
+        isCategoriesUlActive = false;
     } else {
         categoriesUl.style.display = "block";
-        isFilterUlActive = true;
+        isCategoriesUlActive = true;
     }
 })
 
