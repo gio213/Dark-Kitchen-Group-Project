@@ -3,15 +3,18 @@
 
 /* ==== VARIABLES CSS ====*/
 :root {
-    /* ==== Font and typography ====*/
-    --body-font: "Roboto", sans-serif;
+  /* 1rem = 16px */
+  --header-height: 4rem;
 
-    /* ==== CoLors ====*/
+  /* ==== Font and typography ====*/
+  --body-font: "Roboto", sans-serif;
 
+  /* ==== CoLors ====*/
 }
 
 :root,
 :root.light {
+
     /* HSL coLor mode */
     --highlight-color: hsl(180, 100%, 40%);
     --text-color: hsl(180, 5%, 19%);
@@ -69,258 +72,151 @@
     background-position: center;
 }
 
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--body-color);
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*HEADER SECTION*/
 
 header {
-    background-color: var(--header-footer-color);
-    font-family: var(--body-font);
-    height: 6rem;
-    padding: 0 1rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid var(--margin-color);
-    color: var(--text-color);
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
 }
 
-
 .logo {
-    color: var(--highlight-color);
-    font-size: 3rem;
-    width: 80%;
-    height: 70%;
+  color: var(--highlight-color);
+  font-size: 3rem;
+  width: 80%;
+  height: 70%;
 }
 
 .logoContainer {
-    width: 20%;
-    height: 4rem;
+  width: 20%;
+  height: 4rem;
 }
 
 .search-burgerContainer {
-    width: 80%;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
-}
+  border: blue solid 2px;
+  width: 80%;
+  height: 4rem;
 
-
-.searchBarContainer {
-    width: 70%;
-    padding-left: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.searchBar {
-    border: none;
-    width: 100%;
-    border-radius: 0.3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-}
-
-.searchBar-icon {
-    padding: 10px;
-    color: var(--highlight-color);
-}
-
-.searchBar i {
-    font-size: 1.3rem;
-    position: absolute;
-}
-
-.input-field {
-    font-size: 1.3rem;
-    width: 100%;
-    padding: 1rem 2.5rem;
-    border-radius: 0.3rem;
-    color: var(--text-color);
-    background-color: var(--search-bar-color);
-    border: none;
-}
-
-.searchBar {
-    border: blue solid 2px;
-    width: 80%;
-    height: 3rem;
-    display: flex;
-
-}
-
-.loginContainer {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login {
-    border-radius: 0.3rem;
-    border: 2px solid var(--margin-color);
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.login-icon {
-    color: var(--highlight-color);
-    padding-right: 0.5rem;
+  display: flex;
 }
 
 .burgerMenu {
-    border: pink solid 3px;
-    width: 20%;
-    height: 4rem;
-    display: none;
+  border: pink solid 3px;
+  width: 20%;
+  height: 4rem;
+
+  display: none;
+}
+
+.searchBarContainer {
+  border: red solid 2px;
+  width: 60%;
+  padding-left: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  border: none;
+  width: 80%;
+  border-radius: 0.3rem;
+  height: 3rem;
+  display: flex;
+  font-size: 1rem;
+}
+.searchBar-icon {
+  padding: 10px;
+  color: var(--highlight-color);
+  min-width: 50px;
+  text-align: center;
+}
+
+.searchBar i {
+  position: absolute;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0.3rem;
+  background-color: var(--search-bar-color);
+  border: none;
+}
+
+.loginContainer {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 90%;
+  height: 3rem;
+  display: flex;
 }
 
 /*MAIN SECTION*/
 
 main {
+  border: rgb(0, 255, 200) solid 2px;
+  width: 100%;
+  /* height: 100vh; */
+  position: relative;
 
-    border: rgb(0, 255, 200) solid 2px;
-    width: 100%;
-    /* height: 100vh; */
-    position: relative;
-    display: flex;
-    align-content: space-between;
+  display: flex;
+  align-content: space-between;
 }
 
-.selection-Container {
+.filtersContainer {
+  border: blue solid 2px;
+  width: 25%;
+  height: 100vh;
 
-    border: rgb(5, 5, 37) solid 2px;
-    width: 25%;
-    height: 100%;
-
-    position: sticky;
-    top: 0;
-
-
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.selections {
-    /* border: orange dashed 3px; */
+.filters {
+  border: black solid 2px;
+  width: 100%;
+  height: 100%;
+  list-style: none;
 
-    padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.filter,
-.offers,
-.tickets,
-.diet,
-.categories {
-    /* border: black solid 3px; */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+li {
+  border: red solid 2px;
+  width: 90%;
+  height: 2rem;
 
+  display: flex;
 }
-
-.filterTitle,
-.offersTitle,
-.ticketsTitle,
-.dietTitle,
-.categoriesTitle {
-    list-style: none;
-    color: black;
-
-    list-style: none;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-
-}
-
-
-/* .filter-Ul,
-.offers-Ul,
-.tickets-Ul,
-.diet-Ul,
-.categories-Ul {
-
-
-} */
-
-.li {
-    /* border: red solid 2px; */
-    width: 59%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-a[href] {
-    /* border: red solid 2px; */
-    width: 70%;
-    color: black;
-    text-decoration: none;
-}
-
-input[type="checkbox"] {
-    border: gray solid 3px;
-    width: 1rem;
-    height: 1rem;
-
-    border-radius: 50%;
-}
-
-input:checked {
-    border-color: rgb(255, 0, 0);
-}
-
-input:focus {
-    box-shadow: 0 0 3px rgb(0, 0, 0);
-}
-
-/* .filter:hover .filter-Ul,
-.offers:hover .offers-Ul,
-.tickets:hover .tickets-Ul,
-.diet:hover .diet-Ul,
-.categorys:hover .categorys-Ul {
-    display: block;
-} */
-
-/* ul li {
-    /* position: relative; */
-/* float: left; */
-
-
-/*ul li a {
-    color: black;
-    font-size: 2rem;
-    padding: 1rem;
-    display: block;
-
-}
-
-ul .filter {
-    border: red solid 2px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-} */
-
 
 .foodContainer {
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -343,140 +239,132 @@ ul .filter {
     gap: 10px;
 
 
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
 
-.card:hover {
-    transform: scale(0.9);
-
+.card {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .foodImgDiv {
-    width: 100%;
-    height: 150px;
-
-}
-
-.foodImgDiv img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100px;
+  border: 1px solid red;
 }
 
 .namePriceDiv {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
 }
 
 .name {
-    width: 50%;
-    height: 100%;
-
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(72, 217, 20);
 }
 
-
-
 .price {
-    width: 50%;
-    height: 100%;
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(240, 117, 1);
 }
 
 .tags {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(240, 117, 1);
+  display: flex;
+  justify-content: flex-start;
 }
 
 .rating {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(240, 117, 1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .rating i {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
-
-.fa-solid {
-    color: rgb(255, 255, 0);
-}
-
-
-
-
-
 
 /*FOOTER SECTION*/
 
 footer {
-    border: red solid 2px;
 
+    border: red solid 2px;
+    color: var(--text-color);
     width: 100%;
     height: 6rem;
-    color: black;
     display: flex;
     justify-content: space-around;
-    padding-left: 18rem;
-}
 
-.footerLeft {
+}
+.footerLeft{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
-
-.footerLinks {
+.footerLinks{
     display: flex;
 }
-
-.footerLinks p {
+.footerLinks p{
     margin: 0px 1rem;
 }
-
-.footerSocialMedia {
+.footerSocialMedia{
     font-size: 20px;
     color: white;
+   
 }
-
-.footerSocialMedia a {
+.footerSocialMedia a{
     margin: 0px 1rem;
 }
+.footerSocialMedia a i{
+  color: var(--text-color);
+}
+.footerRight{
+  font-size: 3rem;
+  margin-top: 1rem;
+  background-color: var(--highlight-color);
+  border-radius: 9rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  bottom: -5rem;
 
-.footerRight {
-    font-size: 3rem;
-    margin-top: 1rem;
-    background-color: white;
-    border-radius: 9rem;
-    width: 4rem;
-    height: 4rem;
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 1rem;
-    bottom: -5rem;
+ 
+}
+.footerRight a i{
+  color: var(--text-color);
 }
 
-.footerRight a i {
-    color: var(--text-color);
-}
 
 @media only screen and (max-width: 600px) {
+    
     header {
-        height: 10rem;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
 
     .search-burgerContainer {
         width: 100%;
@@ -484,49 +372,35 @@ footer {
 
     .burgerMenu {
         display: flex;
-
     }
 
-
-    @media only screen and (max-width: 600px) {
-
-        header {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-
-        .search-burgerContainer {
-            width: 100%;
-        }
-
-        .burgerMenu {
-            display: flex;
-        }
-
-        .loginContainer {
-            display: none;
-        }
-
-        main {
-            width: 100%;
-        }
-
-        .foodContainer {
-            width: 100%;
-        }
-
-        ul {
-            display: none;
-        }
-
-
-        .filtersContainer {
-            display: none;
-        }
+    .loginContainer {
+        display: none;
     }
 
+    main {
+        width: 100%;
+    }
+
+    .foodContainer {
+        width: 100%;
+    }
+
+    .filtersContainer {
+        display: none;
+    }
+
+    footer {
+        border: red solid 2px;
+        height: auto;
+        width: 100%;
+       padding-left: 0;
+        color: black;
+        display: flex;
+    
+        justify-content: space-around;
+        
+    }
 
 }
+
