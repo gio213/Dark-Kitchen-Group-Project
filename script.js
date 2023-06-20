@@ -259,6 +259,8 @@ search.addEventListener("keyup", (e) => {
       card.style.display = "none";
     }
   }
+
+  
 });
 
   
