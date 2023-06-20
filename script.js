@@ -2,6 +2,7 @@
 const foodContainer = document.querySelector(".foodContainer");
 import meals from "./meals.json" assert { type: "json" };
 const themeSwitchBtn = document.getElementById("themeChanger");
+const search = document.querySelector(".input-field");
 // theme change button
 const setTheme = (theme) => (document.documentElement.className = theme);
 themeSwitchBtn.checked = false;
