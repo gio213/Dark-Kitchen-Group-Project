@@ -1,9 +1,4 @@
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 /* ==== GOOGLE FONTS ====*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
 
@@ -18,7 +13,7 @@
 
 :root,
 :root.light {
-  /* HSL coLor mode */
+ /* HSL coLor mode */
   --highlight-color: hsl(180, 100%, 40%);
   --text-color: hsl(180, 5%, 19%);
   --search-bar-color: hsl(0, 0%, 96%);
@@ -38,19 +33,45 @@
   --body-color: #2c2c2c;
   --tag-color: hsl(4, 62%, 48%);
   --margin-color: rgba(169, 169, 169, 0.768);
+
+
+.themeDiv {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#themeChanger {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: url("assets/icon-moon.svg");
+}
+
+
+#themeChanger:checked {
+    background: url("assets/icon-sun.svg");
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--body-color);
+
 }
 
 /*HEADER SECTION*/
@@ -69,15 +90,15 @@ header {
 
 
 .logo {
-  color: var(--highlight-color);
-  font-size: 3rem;
-  width: 80%;
-  height: 70%;
+    color: var(--highlight-color);
+    font-size: 3rem;
+    width: 80%;
+    height: 70%;
 }
 
 .logoContainer {
-  width: 20%;
-  height: 4rem;
+    width: 20%;
+    height: 4rem;
 }
 
 .search-burgerContainer {
@@ -124,20 +145,19 @@ header {
   border: none;
 }
 
-        .searchBar {
+.searchBar {
             border: blue solid 2px;
             width: 80%;
             height: 3rem;
-
             display: flex;
 
-        }
+ }
 
 .loginContainer {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login {
@@ -168,12 +188,12 @@ main {
     width: 100%;
     /* height: 100vh; */
     position: relative;
-
     display: flex;
     align-content: space-between;
 }
 
 .selection-Container {
+
     border: rgb(5, 5, 37) solid 2px;
     width: 25%;
     height: 100%;
@@ -290,68 +310,93 @@ ul .filter {
 
 
 .foodContainer {
-  border: green solid 2px;
-  width: 75%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
 }
 
 .card {
-  width: 250px;
-  height: 300px;
-  border: 1px solid black;
-  padding: 10px;
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    font-size: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+
 }
 
 .foodImgDiv {
-  width: 100%;
-  height: 100px;
-  border: 1px solid red;
+    width: 100%;
+    height: 150px;
+
+}
+
+.foodImgDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .namePriceDiv {
-  width: 100%;
-  height: 50px;
-  border: 1px solid blue;
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .name {
-  width: 50%;
-  height: 100%;
-  border: 1px solid rgb(72, 217, 20);
+    width: 50%;
+    height: 100%;
+
 }
 
+
+
 .price {
-  width: 50%;
-  height: 100%;
-  border: 1px solid rgb(240, 117, 1);
+    width: 50%;
+    height: 100%;
 }
 
 .tags {
-  width: 100%;
-  height: 50px;
-  border: 1px solid rgb(240, 117, 1);
-  display: flex;
-  justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start
 }
 
 .rating {
-  width: 100%;
-  height: 50px;
-  border: 1px solid rgb(240, 117, 1);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .rating i {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
+
+.fa-solid {
+    color: rgb(255, 255, 0);
+}
+
+
+
+
+
 
 /*FOOTER SECTION*/
 
@@ -362,10 +407,10 @@ footer {
   height: 6rem;
   color: black;
   display: flex;
-
   justify-content: space-around;
   padding-left: 18rem;
 }
+
 .footerLeft {
   display: flex;
   flex-direction: column;
@@ -425,7 +470,7 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
-    
+
     header {
         width: 100%;
         display: flex;
@@ -458,8 +503,11 @@ footer {
         display: none;
     }
 
+
   .filtersContainer {
     display: none;
   }
 }
 
+
+}

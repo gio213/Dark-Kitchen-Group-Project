@@ -2,49 +2,47 @@
 
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Kitchen</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="logoContainer">
-        <div class="logo">Kitchen</div>
-      </div>
-      <div class="search-burgerContainer">
+        <div class="logoContainer">
+            <div class="logo">Kitchen</div>
+        </div>
+        <div class="search-burgerContainer">
 
-        <div class="burgerMenu">
+            <div class="burgerMenu">
+
+            </div>
+            <div class="searchBarContainer">
+                <div class="searchBar">
+                    <i class="fa-solid fa-magnifying-glass searchBar-icon"></i>
+                    <input class="input-field" type="text" placeholder="Dishes" />
+                </div>
+                <div class="themeDiv">
+                    <input type="checkbox" name="" id="themeChanger" />
+                </div>
+            </div>
+            <div class="loginContainer">
+                <div class="login">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="user-login">Sign up or log in</p>
+                </div>
+            </div>
+
 
         </div>
-      <div class="searchBarContainer">
-        <div class="searchBar">
-          <i class="fa-solid fa-magnifying-glass searchBar-icon"></i>
-          <input class="input-field" type="text" placeholder="Meals" />
-        </div>
-      </div>
-      <div class="loginContainer">
-        <div class="login">
-          <i class="fa-regular fa-user login-icon"></i>
-          <p class="user-login">Sign up or log in</p>
-
-        </div>
-      </div>
-
-      
-      </div>
-   
     </header>
 
     <main>
-        <div class="selection-Container">
-            
+        <div class="selection-Container">            
             <ul class="selections">
                 <li class="filter"><a class="filterTitle" href="">Filter</a>
                     <ul class="filter-Ul">
@@ -61,7 +59,6 @@
                         <li class="li"><input type="checkbox"><a href="">Formules</a></li>
                         <li class="li"><input type="checkbox"><a href="">Offers for 5€</a></li>
                         <li class="li"><input type="checkbox"><a href="">1 bought = 1 free</a></li>
-                      
                     </ul>
                 </li>
                 <li class="tickets"><a class="ticketsTitle" href="">Restaurant Tickets</a>
@@ -70,16 +67,18 @@
                         <li class="li"><input type="checkbox"><a href="">Sodexo</a></li>
                     </ul>
                 </li>
+
                 <li class="diet"><a class="dietTitle" href="">Diet(s)</a>
                     <ul class="diet-Ul">
                         <li class="li"><input type="checkbox"><a href="">Bio</a></li>
                         <li class="li"><input type="checkbox"><a href="">Casher</a></li>
                         <li class="li"><input type="checkbox"><a href="">Vegan</a></li>
                         <li class="li"><input type="checkbox"><a href="">Vegeterian</a></li>
-                        <li class="li"><input type="checkbox"><a href="">Without gluten</a></li>
+                        <li class="li"><input type="checkbox"><a href="">Without gluten</a></li
 
                     </ul>
                 </li>
+
                 <li class="categories"><a class="categoriesTitle" href="">Categories</a>
                     <ul class="categories-Ul">
                         <li class="li"><input type="checkbox"><a href="">Alcool</a></li>
@@ -96,6 +95,7 @@
                         <li class="li"><input type="checkbox"><a href="">Libanese</a></li>
                         <li class="li"><input type="checkbox"><a href="">Hawaiian</a></li>
                     </ul>
+
                 </li> 
                 
             </ul>       
@@ -103,43 +103,13 @@
                     
         </div>  
 
-             
-
-            
 
         </div>
 
+        <!--Giorgi-->
         <div class="foodContainer">
-            <div class="card">
-                <div class="foodImgDiv">
-                    <img src="" alt="">
-                </div>
-                <div class="namePriceDiv">
-                    <div class="name">
-                        <h1>name</h1>
-                    </div>
-                    <div class="price">
-                        <h1>price</h1>
-                    </div>
-                </div>
-                <div class="tags">
-                    <h1>
-                        <span>tag</span>
-
-                    </h1>
-                </div>
-                <div class="rating">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-
-
-            </div>
         </div>
-      </div>
+
     </main>
 
 
@@ -148,11 +118,11 @@
         <div class="footerLeft">
 
             <div class="footerLinks">
-                <p class="aboutUs" >About Us
+                <p class="aboutUs">About Us
 
                 </p>
-                <p class="contact" >Contact 
-                    
+                <p class="contact">Contact
+
                 </p>
             </div>
             <p>Copyright © 2023 | All rights reserved</p>
@@ -162,12 +132,13 @@
                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
+
         <div class="footerRight">
-            <a href="#header"> <i class="fas fa-chevron-up" ></i></a>
+            <a href="#header"> <i class="fas fa-chevron-up"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>
