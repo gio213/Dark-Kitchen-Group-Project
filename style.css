@@ -405,10 +405,18 @@ ul .filter {
     align-items: center;
 }
 
-.shoppingBasket img {
+
+
+.shoppingBasket input {
+    appearance: none;
     width: 25px;
     height: 25px;
+    border: none;
     cursor: pointer;
+    background-image: url(assets/basket-shopping);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .addTocardOmg {
