@@ -74,6 +74,34 @@ categories.addEventListener("click", (event) => {
     }
 })
 
+const http = require('http');
+const fs = require('./meals.json');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+const filePath = 'path/to/file.json';
+
+const server = http.createServer((req, res) => {
+  fs.readFile(filePath, 'utf8', (error, data) => {
+    if (error) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error reading JSON file');
+      console.error(error);
+      return;
+    }
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(data);
+  });
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+
 
 //////////footer ///////////
 //contact Form
