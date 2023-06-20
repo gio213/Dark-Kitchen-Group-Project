@@ -338,6 +338,7 @@ ul .filter {
 .price {
   width: 50%;
   height: 100%;
+  color: var(--highlight-color);
 }
 
 .tags {
@@ -345,6 +346,7 @@ ul .filter {
   height: 50px;
   display: flex;
   justify-content: flex-start;
+  font-weight: 100;
 }
 
 .rating {
@@ -358,10 +360,12 @@ ul .filter {
 .rating i {
   width: 20px;
   height: 20px;
+  font-size: 0.8rem;
 }
 
 .fa-solid {
-  color: rgb(255, 255, 0);
+  font-size: 0.8rem;
+  color: gold;
 }
 
 /*FOOTER SECTION*/
