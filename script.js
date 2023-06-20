@@ -265,9 +265,9 @@ search.addEventListener("keyup", (e) => {
 
   
 });
-//italian checkbox
-let italianChecked2 = document.getElementById("italianChecked");
-let italy =(checkbox,categ)=>{
+
+//checkbox category eventlisner
+let checkCategory =(checkbox,categ)=>{
   console.log(checkbox)
   for (let card of foodContainer.children) {
     const tags = card.querySelector(".tags");
@@ -284,27 +284,22 @@ let italy =(checkbox,categ)=>{
    }
   }};
 
-  /* 
-italianChecked2.addEventListener("click", () => italy(italianChecked2,"Italian")) */
-
-
-//loop give id to each checkbox
  let categoriesLi = document.querySelector(".categories-Ul");
 for(let i of categoriesLi.children){
   i.id=i.textContent;
   console.log(i.id)
   let country = document.getElementById(i.id);
   console.log(country)
-  country.addEventListener("click", () => italy(i,i.id))
+  country.addEventListener("click", () => checkCategory(i,i.id))
 } 
+//checkbox diets eventlisner
 
-
-// boucle checkbox 
-
-/*for(let i of categoriesLi.children){
-  console.log(i.textContent);// return italian or mexican
-}*/
-
-
-
+let dietLi = document.querySelector(".diet-Ul");
+for(let i of dietLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.id);
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i,i.id))
+} 
 

@@ -16,7 +16,7 @@
     "category": "Main Course",
     "image": "https://dinnerthendessert.com/wp-content/uploads/2021/05/Chicken-Alfredo-Pasta-1x1-1.jpg",
     "description": "Creamy pasta dish with grilled chicken, tossed in a rich Alfredo sauce.",
-    "tags": ["pasta", "Italian", "chicken"],
+    "tags": ["pasta", "Italian", "Chicken"],
     "origin": "Italy",
     "rating": 4,
     "offer": "20% off on weekdays"
@@ -60,7 +60,7 @@
     "category": "Main Course",
     "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/chicken-tikka-masala-500x500.jpg",
     "description": "Tender chicken marinated in spices, cooked in a creamy tomato-based sauce, served with naan bread.",
-    "tags": ["Indian", "chicken", "spicy"],
+    "tags": ["Indian", "Chicken", "spicy"],
     "origin": "India",
     "rating": 5,
     "offer": "Free delivery on orders above $20"
@@ -247,7 +247,7 @@
     "category": "Soup",
     "image": "https://www.averiecooks.com/wp-content/uploads/2015/09/chickennoodlesoup-14.jpg",
     "description": "Hearty soup with tender chicken, vegetables, and egg noodles, simmered in a flavorful broth.",
-    "tags": ["soup", "comfort food", "chicken"],
+    "tags": ["soup", "comfort food", "Chicken"],
     "origin": "Various",
     "rating": 2,
     "offer": "Bowl + side salad combo at $10.99"
@@ -258,7 +258,7 @@
     "category": "Main Course",
     "image": "https://static01.nyt.com/images/2016/05/28/dining/28COOKING-CHICKEN-TERIYAKI1/28COOKING-CHICKEN-TERIYAKI1-videoSixteenByNineJumbo1600.jpg",
     "description": "Grilled chicken glazed with a sweet and savory teriyaki sauce, served with steamed rice and vegetables.",
-    "tags": ["Asian", "chicken", "teriyaki"],
+    "tags": ["Asian", "Chicken", "teriyaki"],
     "origin": "Japan",
     "rating": 4,
     "offer": "Lunch special: 10% off"
