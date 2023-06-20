@@ -1,5 +1,6 @@
 // Giorgi
-const shoppingBasket = document.querySelector(".shoppingBasket i");
+const shoppingBasket = document.querySelector(".shoppingBasket img");
+
 const foodContainer = document.querySelector(".foodContainer");
 import meals from "./meals.json" assert { type: "json" };
 
@@ -123,6 +124,10 @@ const createCard = () => {
       console.log(shoppingCart);
     });
   }
+  shoppingBasket.addEventListener("click", () => {
+    console.log(totalPrice);
+    console.log(shoppingCart);
+  });
 };
 createCard(meals);
 
