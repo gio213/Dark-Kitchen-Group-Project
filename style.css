@@ -12,7 +12,8 @@
 :root,
 :root.light {
   /* HSL coLor mode */
-  --highlight-color: hsl(180, 100%, 40%);
+  --highlight-color: hsl(180, 90%, 27%);
+  --highlight-color-hover: hsl(180, 100%, 40%);
   --text-color: hsl(180, 5%, 19%);
   --search-bar-color: hsl(0, 0%, 96%);
   --header-footer-color: hsl(0, 0%, 100%);
@@ -25,7 +26,8 @@
 
 :root,
 :root.dark {
-  --highlight-color: hsl(180, 100%, 40%);
+  --highlight-color: hsl(180, 90%, 27%);
+  --highlight-color-hover: hsl(180, 100%, 40%);
   --search-bar-color: hsl(0, 0%, 93%);
   --text-color: hsl(0, 0%, 100%);
   --header-footer-color: #191919;
@@ -120,10 +122,7 @@ header {
 }
 .searchBar-icon {
   padding: 10px;
-  color: var(--highlight-color);
-}
-
-.searchBar i {
+  color: var(--highlight-color) !important;
   font-size: 1.3rem;
   position: absolute;
 }
@@ -152,6 +151,9 @@ header {
   display: flex;
   align-items: center;
 }
+.login:hover {
+  background-color: var(--highlight-color-hover);
+}
 
 .login-icon {
   color: var(--highlight-color);
@@ -168,7 +170,6 @@ header {
 /*MAIN SECTION*/
 
 main {
-  border: rgb(0, 255, 200) solid 2px;
   width: 100%;
   /* height: 100vh; */
   position: relative;
@@ -291,7 +292,6 @@ ul .filter {
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px;
-  justify-content: center;
 }
 
 .card {
@@ -338,6 +338,7 @@ ul .filter {
 .price {
   width: 50%;
   height: 100%;
+  color: var(--highlight-color);
 }
 
 .tags {
@@ -345,6 +346,7 @@ ul .filter {
   height: 50px;
   display: flex;
   justify-content: flex-start;
+  font-weight: 100;
 }
 
 .rating {
@@ -358,23 +360,23 @@ ul .filter {
 .rating i {
   width: 20px;
   height: 20px;
+  font-size: 0.8rem;
 }
 
 .fa-solid {
-  color: rgb(255, 255, 0);
+  font-size: 0.8rem;
+  color: gold;
 }
 
 /*FOOTER SECTION*/
 
 footer {
-  border: red solid 2px;
-
   width: 100%;
-  height: 6rem;
-  color: black;
+  color: var(--text-color);
   display: flex;
   justify-content: space-around;
-  padding-left: 18rem;
+  padding: 1rem;
+  border-top: 2px solid var(--margin-color);
 }
 
 .footerLeft {
@@ -390,15 +392,22 @@ footer {
 
 .footerLinks p {
   margin: 0px 1rem;
+  padding-bottom: 1rem;
+}
+.footerLinks p:hover {
+  color: var(--highlight-color);
+  margin: 0px 1rem;
 }
 
 .footerSocialMedia {
+  padding-top: 1rem;
   font-size: 20px;
   color: white;
 }
 
 .footerSocialMedia a {
   margin: 0px 1rem;
+  color: var(--highlight-color);
 }
 
 .footerRight {
@@ -409,7 +418,6 @@ footer {
   width: 4rem;
   height: 4rem;
   text-align: center;
-
   display: flex;
   align-items: center;
   justify-content: center;
