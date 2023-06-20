@@ -20,6 +20,7 @@
   --tag-color: hsl(4, 62%, 48%);
   --footer-color: hsl(180, 5%, 19%);
   --margin-color: rgba(0, 0, 0, 0.08);
+  --card-color: #fff;
 }
 
 :root,
@@ -119,7 +120,10 @@ header {
 }
 .searchBar-icon {
   padding: 10px;
-  color: var(--highlight-color) !important;
+  color: var(--highlight-color);
+}
+
+.searchBar i {
   font-size: 1.3rem;
   position: absolute;
 }
@@ -129,7 +133,7 @@ header {
   width: 100%;
   padding: 1rem 2.5rem;
   border-radius: 0.3rem;
-  color: var(--text-searchBar-color);
+  color: var(--text-color);
   background-color: var(--search-bar-color);
   border: none;
 }
@@ -149,11 +153,6 @@ header {
   align-items: center;
 }
 
-.login:hover {
-  background-color: var(--highlight-color-hover);
-  color: aliceblue;
-}
-
 .login-icon {
   color: var(--highlight-color);
   padding-right: 0.5rem;
@@ -169,6 +168,7 @@ header {
 /*MAIN SECTION*/
 
 main {
+  border: rgb(0, 255, 200) solid 2px;
   width: 100%;
   /* height: 100vh; */
   position: relative;
@@ -180,14 +180,17 @@ main {
   border: rgb(5, 5, 37) solid 2px;
   width: 25%;
   height: 100%;
+
   position: sticky;
   top: 0;
+
   display: flex;
   flex-direction: column;
 }
 
 .selections {
   /* border: orange dashed 3px; */
+
   padding-left: 2.5rem;
 }
 
@@ -288,12 +291,14 @@ ul .filter {
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px;
+  justify-content: center;
 }
 
 .card {
   width: 250px;
   height: 350px;
   padding: 10px;
+  background-color: var(--card-color);
   display: flex;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
@@ -356,17 +361,17 @@ ul .filter {
 }
 
 .fa-solid {
-  color: gold;
+  color: rgb(255, 255, 0);
 }
 
 /*FOOTER SECTION*/
 
 footer {
-  background-color: var(--header-footer-color);
-  border-top: 2px solid var(--margin-color);
-  color: var(--text-color);
+  border: red solid 2px;
+
   width: 100%;
   height: 6rem;
+  color: black;
   display: flex;
   justify-content: space-around;
   padding-left: 18rem;
@@ -389,12 +394,11 @@ footer {
 
 .footerSocialMedia {
   font-size: 20px;
-  color: var(--text-color);
+  color: white;
 }
 
 .footerSocialMedia a {
   margin: 0px 1rem;
-  color: var(--text-color);
 }
 
 .footerRight {
@@ -405,6 +409,7 @@ footer {
   width: 4rem;
   height: 4rem;
   text-align: center;
+
   display: flex;
   align-items: center;
   justify-content: center;

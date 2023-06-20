@@ -247,3 +247,26 @@ const openaboutUs = () => {
   popup.document.close();
 };
 aboutUs.addEventListener("click", openaboutUs);
+
+//Research bar algo
+search.addEventListener("keyup", (e) => {
+  const searchString = e.target.value.toLowerCase().replace(/\s/g, '');
+
+  for (let card of foodContainer.children) {
+    const name = card.querySelector(".name h1").textContent.toLowerCase().replace(/\s/g, '');
+
+    if (name.includes(searchString)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  }
+
+  
+});
+
+  
+
+
+
+
