@@ -1,6 +1,6 @@
 // Giorgi
 const shoppingBasket = document.querySelector("#basket");
-
+const circle = document.querySelector(".circle");
 const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
 const search = document.querySelector(".input-field");
@@ -95,6 +95,12 @@ const createCard = () => {
     const addTocardOmg = document.createElement("div");
     addTocardOmg.classList.add("addTocardOmg");
     rating.appendChild(addTocardOmg);
+    const offerDiv = document.createElement("div");
+    offerDiv.classList.add("offer");
+    foodImgDiv.appendChild(offerDiv);
+    const offer = document.createElement("h3");
+    offerDiv.appendChild(offer);
+    offer.textContent = `Offer: ${meals[i].offer}`;
 
     foodImg.src = meals[i].image;
     name.textContent = meals[i].name;
@@ -131,6 +137,10 @@ const createCard = () => {
         totalPrice += meals[i].price;
         console.log(totalPrice);
       }
+      if (shoppingCart.length > 0) {
+        circle.style.visibility = "visible";
+        circle.textContent = shoppingCart.length;
+      }
       console.log(shoppingCart);
       const listLi = document.createElement("li");
       const liDiv = document.createElement("div");
@@ -138,7 +148,7 @@ const createCard = () => {
       removeImg.classList.add("removeImg");
       removeImg.src = "./assets/icons8-remove-48.png";
       liDiv.classList.add("liDiv");
-      const liDivTxt = document.createElement("h6");
+      const liDivTxt = document.createElement("p");
       cartProductsContainer.appendChild(total);
       liDiv.appendChild(liDivTxt);
       listLi.appendChild(liDiv);
@@ -151,6 +161,12 @@ const createCard = () => {
         totalPrice -= meals[i].price;
         total.textContent = `Total: ${totalPrice.toFixed(2)} €`;
         listOl.removeChild(listLi);
+        shoppingCart.pop();
+        circle.textContent = shoppingCart.length;
+        if (shoppingCart.length === 0) {
+          circle.style.visibility = "hidden";
+          cartProductsContainer.removeChild(total);
+        }
       });
     });
   }

@@ -358,12 +358,14 @@ ul .filter {
 .foodImgDiv {
     width: 100%;
     height: 200px;
+    position: relative;
 }
 
 .foodImgDiv img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
 }
 
 .namePriceDiv {
@@ -427,13 +429,18 @@ ul .filter {
 .totalBtn {
     width: 100px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: var(--highlight-color);
     border: none;
     cursor: pointer;
     text-align: center;
+    color: white;
 }
 
+.totalBtn:hover {
+    background-color: var(--highlight-color-hover);
+    color: black;
+}
 
 .liDiv {
     width: 100%;
@@ -445,11 +452,11 @@ ul .filter {
 
 }
 
-
-
-.totalBtn:hover {
-    background-color: var(--highlight-color-hover);
+.cartProductsContainer li {
+    color: #191919;
 }
+
+
 
 
 .shoppingBasket input {
@@ -474,6 +481,18 @@ ul .filter {
     background-size: contain;
     background-position: center;
     cursor: pointer;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
 }
 
 .rating i {
@@ -508,6 +527,21 @@ footer {
 .footerLinks {
     display: flex;
 }
+
+.offer {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--tag-color);
+    color: white;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-transform: capitalize;
+}
+
 
 .footerLinks p {
     margin: 0px 1rem;
