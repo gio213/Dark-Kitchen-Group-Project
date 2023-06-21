@@ -38,29 +38,6 @@
 
 }
 
-.themeDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#themeChanger {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    background: url("assets/icon-moon.svg");
-}
-
-#themeChanger:checked {
-    border: none;
-    background: url("assets/icon-sun.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -71,7 +48,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--body-color);
     transition: background-color 0.5s ease;
 }
@@ -81,7 +58,6 @@ body {
 header {
     background-color: var(--header-footer-color);
     font-family: var(--body-font);
-    height: 6rem;
     padding: 0 1rem;
     width: 100%;
     display: flex;
@@ -103,13 +79,12 @@ header {
 
 .search-burgerContainer {
     width: 80%;
-    height: 4rem;
     display: flex;
     justify-content: space-between;
 }
 
 .searchBarContainer {
-    width: 70%;
+    width: 100%;
     padding-left: 1rem;
     display: flex;
     align-items: center;
@@ -143,13 +118,16 @@ header {
 }
 
 .loginContainer {
-    width: 20%;
+    order: 2;
+    width: 45%;
     display: flex;
-    justify-content: center;
+    gap: 1rem;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .login {
+    order: 2;
     border-radius: 0.3rem;
     border: 2px solid var(--margin-color);
     padding: 0.5rem;
@@ -162,15 +140,33 @@ header {
 }
 
 .login-icon {
-    color: var(--highlight-color);
+    color: var(--highlight-color-hover);
     padding-right: 0.5rem;
 }
 
 .burgerMenu {
-    border: pink solid 3px;
-    width: 20%;
-    height: 4rem;
     display: none;
+}
+
+.themeDiv {
+    order: 3;
+}
+
+#themeChanger {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: url("assets/icon-moon.svg");
+}
+
+#themeChanger:checked {
+    border: none;
+    background: url("assets/icon-sun.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /*MAIN SECTION*/
@@ -293,6 +289,7 @@ ul .filter {
 
 .foodContainer {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -335,11 +332,10 @@ ul .filter {
     }
 }
 
-
-
 .card {
     width: 250px;
-    height: 350px;
+
+    height: fit-content;
     padding: 10px;
     background-color: var(--card-color);
     display: flex;
@@ -368,33 +364,45 @@ ul .filter {
 
 .namePriceDiv {
     width: 100%;
-    height: 50px;
+    /*   height: 50px; */
     display: flex;
     justify-content: space-between;
+    padding: 0.6rem 0 0 0;
 }
 
 .name {
     width: 70%;
-    height: 100%;
+    /*   height: 100%; */
 }
 
 .price {
     width: 25%;
-    height: 100%;
+    /*  height: 100%; */
     color: var(--highlight-color);
 }
 
 .tags {
     width: 100%;
-    height: 50px;
+    /*   height: 50px; */
     display: flex;
     justify-content: flex-start;
     text-transform: capitalize;
 }
 
+.tags p {
+    font-size: 0.8rem;
+    padding: 0.4rem 0 0.8rem;
+}
+
+.category h1 {
+    color: var(--highlight-color);
+    padding-bottom: 0.6rem;
+    font-size: 0.8rem;
+}
+
 .rating {
     width: 100%;
-    height: 50px;
+    /*  height: 50px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -410,46 +418,8 @@ ul .filter {
 .shoppingBasket {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.removeImg {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.removeImg:hover {
-    transform: scale(1.2);
-
-}
-
-.totalBtn {
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: var(--highlight-color);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-
-.liDiv {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #191919;
-
-}
-
-
-
-.totalBtn:hover {
-    background-color: var(--highlight-color-hover);
-}
 
 
 .shoppingBasket input {
@@ -551,24 +521,63 @@ footer {
 
 @media only screen and (max-width: 600px) {
     header {
-        height: 10rem;
         width: 100%;
         position: relative;
+        padding: 1rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .search-burgerContainer {
+    .themeDiv {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .loginContainer {
         width: 100%;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    .login {
+        border: none;
+        font-size: 1rem;
+    }
+
+    .login-icon:hover {
+        color: var(--highlight-color);
+    }
+
+    .user-login {
+        display: none;
+    }
+
+    .searchBarContainer {
+        width: 90%;
     }
 
     .search-burgerContainer {
         width: 100%;
+        padding-top: 1rem;
+    }
+
+    .search-burgerContainer {
+        padding: 1rem;
     }
 
     .burgerMenu {
         display: flex;
+    }
+
+    .burgerMenu i {
+        font-size: 2rem;
+        color: var(--highlight-color-hover);
+    }
+
+    .burgerMenu:hover {
+        color: var(--highlight-color);
     }
 
     main {
