@@ -22,6 +22,7 @@
   --footer-color: hsl(180, 5%, 19%);
   --margin-color: rgba(0, 0, 0, 0.08);
   --card-color: #fff;
+  --burgerMenu-background: hsla(0, 0%, 96%, 0.957);
 }
 
 :root,
@@ -34,6 +35,7 @@
   --body-color: #2c2c2c;
   --tag-color: hsl(4, 62%, 48%);
   --margin-color: rgba(169, 169, 169, 0.768);
+  --burgerMenu-background: hsla(0, 11%, 98%, 0.948);
 }
 
 * {
@@ -125,20 +127,24 @@ header {
 }
 
 .login {
+  /* dhah */
+  width: 11rem;
   order: 2;
   border-radius: 0.3rem;
   border: 2px solid var(--margin-color);
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: flex;
   align-items: center;
 }
 
 .login:hover {
-  background-color: var(--highlight-color-hover);
+  background-color: var(--highlight-color);
+  color: #fff;
 }
 
 .login-icon {
   color: var(--highlight-color-hover);
+  font-size: 1.3rem;
   padding-right: 0.5rem;
 }
 
@@ -178,16 +184,12 @@ main {
 }
 
 .selection-Container {
-  /* border: rgb(5, 5, 37) solid 2px; */
-
-  width: 25%;
+  width: 30rem;
   height: 27rem;
   margin-top: 2rem;
   overflow-y: scroll;
-
   position: sticky;
   top: 0;
-
   display: flex;
   flex-direction: column;
 }
@@ -238,10 +240,8 @@ main {
   font-size: 1.5rem;
   font-family: sans-serif;
   padding-right: 1rem;
-
   padding-top: 1rem;
   padding-bottom: 1rem;
-
   border-bottom: solid #b4b2b2 1.3px;
 }
 
@@ -254,10 +254,13 @@ main {
 
 } */
 
-.li {
-  /* border: red solid 2px; */
-  /* border-bottom: #8a8989 solid 1px; */
+.selection-Container ul,
+.selections li,
+.selections p {
+  color: black;
+}
 
+.li {
   width: 75%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -266,15 +269,12 @@ main {
 }
 
 .liParag {
-  /* border: rgb(148, 109, 109) solid 2px; */
-
   width: 80%;
 }
 
 a[href] {
   /* border: red solid 2px; */
   width: 70%;
-  color: black;
   text-decoration: none;
 }
 
@@ -282,7 +282,6 @@ input[type="checkbox"] {
   border: gray solid 3px;
   width: 1rem;
   height: 1rem;
-
   border-radius: 50%;
 }
 
@@ -485,8 +484,8 @@ ul .filter {
 
 .shoppingBasket input {
   appearance: none;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border: none;
   cursor: pointer;
   background-image: url(assets/basket-shopping);
@@ -508,15 +507,18 @@ ul .filter {
 }
 
 .circle {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-color: red;
+  background-color: var(--tag-color);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   position: absolute;
+  top: 1rem;
+  right: 14.8rem;
 }
 
 .rating i {
@@ -597,7 +599,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   right: 1rem;
   bottom: 4rem;
 }
@@ -629,12 +631,17 @@ footer {
   }
 
   .login {
+    width: 2.3rem;
     border: none;
     font-size: 1rem;
   }
 
+  .login-icon {
+    font-size: 1.5rem;
+  }
+
   .login-icon:hover {
-    color: var(--highlight-color);
+    color: white;
   }
 
   .user-login {
@@ -666,6 +673,29 @@ footer {
   .burgerMenu:hover {
     color: var(--highlight-color);
   }
+  .close-filter {
+    display: none;
+  }
+
+  .circle {
+    top: 10.2rem;
+    left: 3.3rem;
+  }
+
+  .selection-Container {
+    display: none;
+  }
+
+  .selections {
+    background-color: var(--burgerMenu-background);
+    top: -3.7rem;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 9000;
+  }
 
   main {
     width: 100%;
@@ -673,13 +703,11 @@ footer {
 
   .foodContainer {
     width: 100%;
+    justify-content: center;
   }
-
-  ul {
-    display: none;
-  }
-
-  .filtersContainer {
-    display: none;
+  .cartProductsContainer {
+    width: 26rem;
+    left: 1rem;
+    top: 13.4rem;
   }
 }

@@ -1,10 +1,10 @@
+import meals from "./meals.json" assert { type: "json" };
 // Giorgi
 const shoppingBasket = document.querySelector("#basket");
 const circle = document.querySelector(".circle");
 const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
 const search = document.querySelector(".input-field");
-import meals from "./meals.json" assert { type: "json" };
 // creating basket container
 const cartProductsContainer = document.createElement("div");
 cartProductsContainer.classList.add("cartProductsContainer");
@@ -396,3 +396,22 @@ for (let i of dietLi.children) {
   console.log(country);
   country.addEventListener("click", () => checkCategory(i, i.id));
 }
+
+/* burgerMenu */
+
+const toggleMenu = () => {
+  const selectionsFilter = document.querySelector("#selections_filter");
+  const openFilter = document.querySelector(".open-filter");
+  const closeFilter = document.querySelector(".close-filter");
+  selectionsFilter.classList.toggle("selection-Container");
+
+  if (selectionsFilter.classList.contains("selection-Container")) {
+    openFilter.style.display = "inline-block";
+    closeFilter.style.display = "none";
+  } else {
+    openFilter.style.display = "none";
+    closeFilter.style.display = "inline-block";
+  }
+};
+
+burgerMenu.addEventListener("click", toggleMenu);
