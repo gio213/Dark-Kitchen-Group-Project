@@ -17,7 +17,6 @@ total.classList.add("totalBtn");
 
 // theme change button
 const themeSwitchBtn = document.getElementById("themeChanger");
-
 const setTheme = (theme) => (document.documentElement.className = theme);
 setTheme("light");
 themeSwitchBtn.addEventListener("change", () => {
@@ -182,6 +181,7 @@ shoppingBasket.addEventListener("click", () => {
     cartProductsContainer.style.visibility = "hidden";
   }
 });
+// finish Giorgis part
 
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
