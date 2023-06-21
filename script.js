@@ -1,5 +1,6 @@
 // Giorgi
-const shoppingBasket = document.querySelector(".shoppingBasket input");
+const shoppingBasket = document.querySelector("#basket");
+
 const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
 const search = document.querySelector(".input-field");
@@ -10,8 +11,9 @@ cartProductsContainer.classList.add("cartProductsContainer");
 header.appendChild(cartProductsContainer);
 const listOl = document.createElement("ol");
 cartProductsContainer.appendChild(listOl);
-const total = document.createElement("h5");
-cartProductsContainer.appendChild(total);
+const total = document.createElement("button");
+total.setAttribute("type", "button");
+total.classList.add("totalBtn");
 
 // theme change button
 const themeSwitchBtn = document.getElementById("themeChanger");
@@ -122,7 +124,7 @@ const createCard = () => {
     }
 
     // adding to cart, total price, and cart array
-    card.addEventListener("click", (e) => {
+    addTocardOmg.addEventListener("click", (e) => {
       console.log(e.target);
       if (e.target.classList.contains("addTocardOmg")) {
         shoppingCart.push(meals[i].name + " " + meals[i].price + " €");
@@ -132,12 +134,24 @@ const createCard = () => {
       console.log(shoppingCart);
       const listLi = document.createElement("li");
       const liDiv = document.createElement("div");
+      const removeImg = document.createElement("img");
+      removeImg.classList.add("removeImg");
+      removeImg.src = "./assets/icons8-remove-48.png";
+      liDiv.classList.add("liDiv");
       const liDivTxt = document.createElement("h6");
+      cartProductsContainer.appendChild(total);
       liDiv.appendChild(liDivTxt);
       listLi.appendChild(liDiv);
       listOl.appendChild(listLi);
       liDivTxt.textContent = shoppingCart[shoppingCart.length - 1];
-      total.textContent = `Total: ${totalPrice} €`;
+      liDiv.appendChild(removeImg);
+      total.textContent = `Total: ${totalPrice.toFixed(2)} €`;
+      removeImg.addEventListener("click", () => {
+        liDiv.remove();
+        totalPrice -= meals[i].price;
+        total.textContent = `Total: ${totalPrice.toFixed(2)} €`;
+        listOl.removeChild(listLi);
+      });
     });
   }
 };
