@@ -183,6 +183,8 @@ shoppingBasket.addEventListener("click", () => {
 });
 // finish Giorgis part
 
+// Other JavaScript code...
+
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
 let offers = document.querySelector(".offersTitle");
@@ -277,8 +279,7 @@ const openForm = () => {
     <div class="logo"></div>
     <h1 id="form-title">Contact Form</h1>
     </div>
-      <form class="contact-form"  method="POST">
-
+      <form class="contact-form" action="/submit"  method="POST">
       <div class="form-group">
         <label for="name" value="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -297,6 +298,7 @@ const openForm = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
+
     </body>
     </html>
     `;
@@ -324,9 +326,7 @@ const openaboutUs = () => {
       At our Dark Kitchen, we focus on creating innovative and mouthwatering dishes that cater to various dietary preferences. Whether you're a meat lover, a vegetarian, or follow a specific diet, we have a wide range of options to satisfy your cravings.<br>
       Our dedicated team of chefs and staff work tirelessly to ensure that every order is prepared with utmost care and attention to detail. We value customer satisfaction and aim to exceed your expectations with every meal.<br>
       Thank you for choosing our Dark Kitchen. We look forward to serving you and creating memorable dining experiences.</p>
-
   </section>
-
     `;
 
   popup.document.open();
@@ -352,3 +352,41 @@ search.addEventListener("keyup", (e) => {
     }
   }
 });
+
+//checkbox category eventlisner
+let checkCategory = (checkbox, categ) => {
+  console.log(checkbox);
+  for (let card of foodContainer.children) {
+    const tags = card.querySelector(".tags");
+    for (let tag of tags.children) {
+      if (checkbox.children[0].checked == true) {
+        if (tag.textContent.includes(categ)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      } else {
+        card.style.display = "block";
+      }
+    }
+  }
+};
+
+let categoriesLi = document.querySelector(".categories-Ul");
+for (let i of categoriesLi.children) {
+  i.id = i.textContent;
+  console.log(i.id);
+  let country = document.getElementById(i.id);
+  console.log(country);
+  country.addEventListener("click", () => checkCategory(i, i.id));
+}
+//checkbox diets eventlisner
+
+let dietLi = document.querySelector(".diet-Ul");
+for (let i of dietLi.children) {
+  i.id = i.textContent;
+  console.log(i.id);
+  let country = document.getElementById(i.id);
+  console.log(country);
+  country.addEventListener("click", () => checkCategory(i, i.id));
+}
