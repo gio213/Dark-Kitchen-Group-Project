@@ -1,10 +1,20 @@
 // Giorgi
+const shoppingBasket = document.querySelector(".shoppingBasket input");
+const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
-import meals from "./meals.json" assert { type: "json" };
-
-const themeSwitchBtn = document.getElementById("themeChanger");
 const search = document.querySelector(".input-field");
+import meals from "./meals.json" assert { type: "json" };
+// creating basket container
+const cartProductsContainer = document.createElement("div");
+cartProductsContainer.classList.add("cartProductsContainer");
+header.appendChild(cartProductsContainer);
+const listOl = document.createElement("ol");
+cartProductsContainer.appendChild(listOl);
+const total = document.createElement("h5");
+cartProductsContainer.appendChild(total);
+
 // theme change button
+const themeSwitchBtn = document.getElementById("themeChanger");
 
 const setTheme = (theme) => (document.documentElement.className = theme);
 setTheme("light");
@@ -17,8 +27,10 @@ themeSwitchBtn.addEventListener("change", () => {
   }
 });
 
+let shoppingCart = [];
+let totalPrice = 0;
 // creating cards for each meal
-const createCard = (name) => {
+const createCard = () => {
   for (let i = 0; i < meals.length; i++) {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -45,7 +57,13 @@ const createCard = (name) => {
     const tagDiv = document.createElement("div");
     tagDiv.classList.add("tags");
     card.appendChild(tagDiv);
-    const tag = document.createElement("h1");
+    const categoryDiv = document.createElement("div");
+    categoryDiv.classList.add("category");
+    card.appendChild(categoryDiv);
+    const category = document.createElement("h1");
+    categoryDiv.appendChild(category);
+    category.textContent = ` Category: ${meals[i].category}`;
+    const tag = document.createElement("p");
     tagDiv.appendChild(tag);
     const rating = document.createElement("div");
     rating.classList.add("rating");
@@ -64,11 +82,21 @@ const createCard = (name) => {
     rating.appendChild(star4);
     const star5 = document.createElement("i");
     star5.classList.add("fa-regular", "fa-star");
-    rating.appendChild(star5);
+    const starDiv = document.createElement("div");
+    starDiv.classList.add("starDiv");
+    starDiv.appendChild(star);
+    starDiv.appendChild(star2);
+    starDiv.appendChild(star3);
+    starDiv.appendChild(star4);
+    starDiv.appendChild(star5);
+    rating.appendChild(starDiv);
+    const addTocardOmg = document.createElement("div");
+    addTocardOmg.classList.add("addTocardOmg");
+    rating.appendChild(addTocardOmg);
 
     foodImg.src = meals[i].image;
     name.textContent = meals[i].name;
-    price.textContent = meals[i].price;
+    price.textContent = `${meals[i].price} €`;
     tag.textContent = meals[i].tags;
 
     if (meals[i].rating === 1) {
@@ -92,9 +120,38 @@ const createCard = (name) => {
       star4.classList.add("fa-solid");
       star5.classList.add("fa-solid");
     }
+
+    // adding to cart, total price, and cart array
+    card.addEventListener("click", (e) => {
+      console.log(e.target);
+      if (e.target.classList.contains("addTocardOmg")) {
+        shoppingCart.push(meals[i].name + " " + meals[i].price + " €");
+        totalPrice += meals[i].price;
+        console.log(totalPrice);
+      }
+      console.log(shoppingCart);
+      const listLi = document.createElement("li");
+      const liDiv = document.createElement("div");
+      const liDivTxt = document.createElement("h6");
+      liDiv.appendChild(liDivTxt);
+      listLi.appendChild(liDiv);
+      listOl.appendChild(listLi);
+      liDivTxt.textContent = shoppingCart[shoppingCart.length - 1];
+      total.textContent = `Total: ${totalPrice} €`;
+    });
   }
 };
+
 createCard(meals);
+
+shoppingBasket.addEventListener("click", () => {
+  if (shoppingBasket.checked) {
+    cartProductsContainer.style.visibility = "visible";
+  }
+  if (!shoppingBasket.checked) {
+    cartProductsContainer.style.visibility = "hidden";
+  }
+});
 
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
@@ -251,10 +308,13 @@ aboutUs.addEventListener("click", openaboutUs);
 
 //Research bar algo
 search.addEventListener("keyup", (e) => {
-  const searchString = e.target.value.toLowerCase().replace(/\s/g, '');
+  const searchString = e.target.value.toLowerCase().replace(/\s/g, "");
 
   for (let card of foodContainer.children) {
-    const name = card.querySelector(".name h1").textContent.toLowerCase().replace(/\s/g, '');
+    const name = card
+      .querySelector(".name h1")
+      .textContent.toLowerCase()
+      .replace(/\s/g, "");
 
     if (name.includes(searchString)) {
       card.style.display = "block";
@@ -262,8 +322,6 @@ search.addEventListener("keyup", (e) => {
       card.style.display = "none";
     }
   }
-
-  
 });
 
 //checkbox category eventlisner
@@ -301,4 +359,5 @@ for(let i of dietLi.children){
   let country = document.getElementById(i.id);
   console.log(country)
   country.addEventListener("click", () => checkCategory(i,i.id))
+
 } 
