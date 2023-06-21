@@ -302,4 +302,3 @@ for(let i of dietLi.children){
   console.log(country)
   country.addEventListener("click", () => checkCategory(i,i.id))
 } 
-
