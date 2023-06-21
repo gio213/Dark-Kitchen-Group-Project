@@ -30,7 +30,7 @@
     "tags": ["Burger", "American", "Beef"],
     "origin": "United States",
     "rating": 4,
-    "offer": "Combo meal at $12.99"
+    "offer": "Combo meal at €12.99"
   },
   {
     "name": "Caesar Salad",
@@ -41,7 +41,7 @@
     "tags": ["Salad", "American", "Vegetarian"],
     "origin": "United States",
     "rating": 4,
-    "offer": "Add grilled chicken for $2 extra"
+    "offer": "Add grilled chicken for €2 extra"
   },
   {
     "name": "Sushi Rolls",
@@ -63,7 +63,7 @@
     "tags": ["Indian", "Chicken", "Spicy"],
     "origin": "India",
     "rating": 5,
-    "offer": "Free delivery on orders above $20"
+    "offer": "Free delivery on orders above €20"
   },
   {
     "name": "Margarita Cocktail",
@@ -107,7 +107,7 @@
     "tags": ["Wrap", "American", "Chicken"],
     "origin": "United States",
     "rating": 4,
-    "offer": "Lunch combo: Wrap + drink for $11.99"
+    "offer": "Lunch combo: Wrap + drink for €11.99"
   },
   {
     "name": "Pad Thai",
@@ -173,7 +173,7 @@
     "tags": ["Chinese", "Fried rice", "Chicken"],
     "origin": "China",
     "rating": 4,
-    "offer": "Extra portion for $2"
+    "offer": "Extra portion for €2"
   },
   {
     "name": "Garden Salad",
@@ -195,7 +195,7 @@
     "tags": ["Pie", "Dessert", "Lemon"],
     "origin": "Various",
     "rating": 4,
-    "offer": "Add a scoop of vanilla ice cream for $2"
+    "offer": "Add a scoop of vanilla ice cream for €2"
   },
   {
     "name": "Chicken Parmesan",
@@ -250,7 +250,7 @@
     "tags": ["soup", "comfort food", "Chicken"],
     "origin": "Various",
     "rating": 2,
-    "offer": "Bowl + side salad combo at $10.99"
+    "offer": "Bowl + side salad combo at €10.99"
   },
   {
     "name": "Chicken Teriyaki",
