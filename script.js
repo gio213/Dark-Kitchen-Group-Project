@@ -158,13 +158,19 @@ const createCard = () => {
 
 createCard(meals);
 
-shoppingBasket.addEventListener("click", () => {
-  if (shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "visible";
-  }
-  if (!shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "hidden";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const shoppingBasket = document.querySelector(".shoppingBasket");
+  const cartProductsContainer = document.querySelector(".cartProductsContainer");
+
+  shoppingBasket.addEventListener("click", () => {
+    if (shoppingBasket.checked) {
+      cartProductsContainer.style.visibility = "visible";
+    } else {
+      cartProductsContainer.style.visibility = "hidden";
+    }
+  });
+
+  // Other JavaScript code...
 });
 
 let filter = document.querySelector(".filterTitle");
@@ -261,7 +267,7 @@ const openForm = () => {
     <div class="logo"></div>
     <h1 id="form-title">Contact Form</h1>
     </div>
-      <form class="contact-form"  method="POST">
+      <form class="contact-form" action="/submit"  method="POST">
 
       <div class="form-group">
         <label for="name" value="name">Name:</label>
@@ -281,6 +287,7 @@ const openForm = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
+   
     </body>
     </html>
     `;
@@ -336,3 +343,41 @@ search.addEventListener("keyup", (e) => {
     }
   }
 });
+
+//checkbox category eventlisner
+let checkCategory =(checkbox,categ)=>{
+  console.log(checkbox)
+  for (let card of foodContainer.children) {
+    const tags = card.querySelector(".tags");
+    for (let tag of tags.children) {
+      if(checkbox.children[0].checked==true){
+        if (tag.textContent.includes(categ)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      }else{
+        card.style.display = "block";
+      }
+   }
+  }};
+
+ let categoriesLi = document.querySelector(".categories-Ul");
+for(let i of categoriesLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.id);
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i,i.id))
+} 
+//checkbox diets eventlisner
+
+let dietLi = document.querySelector(".diet-Ul");
+for(let i of dietLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.id);
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i,i.id))
+
+} 
