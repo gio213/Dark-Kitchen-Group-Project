@@ -296,21 +296,22 @@ ul .filter {
 
 .cartProductsContainer {
   width: 300px;
-  /*   height: 400px; */
-  background-color: var(--card-color);
+  height: 400px;
+  background-color: white;
   position: absolute;
   top: 5rem;
   right: 5rem;
   z-index: 2;
   animation: cardPopap 0.5s ease-in-out;
   border-radius: 15px;
-  opacity: 1;
+  /* opacity: 1; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
+  gap: 5px;
   visibility: hidden;
   overflow-y: scroll;
-  align-items: center;
+  padding: 20px;
 }
 
 @keyframes cardPopap {
@@ -410,11 +411,11 @@ ul .filter {
   display: flex;
   align-items: center;
 }
-/* testtt */
+
 .shoppingBasket input {
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border: none;
   cursor: pointer;
   background-image: url(assets/basket-shopping);
@@ -542,6 +543,7 @@ footer {
   .user-login {
     display: none;
   }
+
   .searchBarContainer {
     width: 90%;
   }

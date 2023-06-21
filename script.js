@@ -1,5 +1,6 @@
 // Giorgi
-const shoppingBasket = document.querySelector(".shoppingBasket input");
+const shoppingBasket = document.querySelector("#basket");
+
 const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
 const search = document.querySelector(".input-field");
@@ -10,8 +11,9 @@ cartProductsContainer.classList.add("cartProductsContainer");
 header.appendChild(cartProductsContainer);
 const listOl = document.createElement("ol");
 cartProductsContainer.appendChild(listOl);
-const total = document.createElement("h5");
-cartProductsContainer.appendChild(total);
+const total = document.createElement("button");
+total.setAttribute("type", "button");
+total.classList.add("totalBtn");
 
 // theme change button
 const themeSwitchBtn = document.getElementById("themeChanger");
@@ -122,7 +124,7 @@ const createCard = () => {
     }
 
     // adding to cart, total price, and cart array
-    card.addEventListener("click", (e) => {
+    addTocardOmg.addEventListener("click", (e) => {
       console.log(e.target);
       if (e.target.classList.contains("addTocardOmg")) {
         shoppingCart.push(meals[i].name + " " + meals[i].price + " €");
@@ -132,25 +134,43 @@ const createCard = () => {
       console.log(shoppingCart);
       const listLi = document.createElement("li");
       const liDiv = document.createElement("div");
+      const removeImg = document.createElement("img");
+      removeImg.classList.add("removeImg");
+      removeImg.src = "./assets/icons8-remove-48.png";
+      liDiv.classList.add("liDiv");
       const liDivTxt = document.createElement("h6");
+      cartProductsContainer.appendChild(total);
       liDiv.appendChild(liDivTxt);
       listLi.appendChild(liDiv);
       listOl.appendChild(listLi);
       liDivTxt.textContent = shoppingCart[shoppingCart.length - 1];
-      total.textContent = `Total: ${totalPrice} €`;
+      liDiv.appendChild(removeImg);
+      total.textContent = `Total: ${totalPrice.toFixed(2)} €`;
+      removeImg.addEventListener("click", () => {
+        liDiv.remove();
+        totalPrice -= meals[i].price;
+        total.textContent = `Total: ${totalPrice.toFixed(2)} €`;
+        listOl.removeChild(listLi);
+      });
     });
   }
 };
 
 createCard(meals);
 
-shoppingBasket.addEventListener("click", () => {
-  if (shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "visible";
-  }
-  if (!shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "hidden";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const shoppingBasket = document.querySelector(".shoppingBasket");
+  const cartProductsContainer = document.querySelector(".cartProductsContainer");
+
+  shoppingBasket.addEventListener("click", () => {
+    if (shoppingBasket.checked) {
+      cartProductsContainer.style.visibility = "visible";
+    } else {
+      cartProductsContainer.style.visibility = "hidden";
+    }
+  });
+
+  // Other JavaScript code...
 });
 
 let filter = document.querySelector(".filterTitle");
@@ -247,7 +267,7 @@ const openForm = () => {
     <div class="logo"></div>
     <h1 id="form-title">Contact Form</h1>
     </div>
-      <form class="contact-form"  method="POST">
+      <form class="contact-form" action="/submit"  method="POST">
 
       <div class="form-group">
         <label for="name" value="name">Name:</label>
@@ -267,6 +287,7 @@ const openForm = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
+   
     </body>
     </html>
     `;
@@ -322,3 +343,41 @@ search.addEventListener("keyup", (e) => {
     }
   }
 });
+
+//checkbox category eventlisner
+let checkCategory =(checkbox,categ)=>{
+  console.log(checkbox)
+  for (let card of foodContainer.children) {
+    const tags = card.querySelector(".tags");
+    for (let tag of tags.children) {
+      if(checkbox.children[0].checked==true){
+        if (tag.textContent.includes(categ)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      }else{
+        card.style.display = "block";
+      }
+   }
+  }};
+
+ let categoriesLi = document.querySelector(".categories-Ul");
+for(let i of categoriesLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.id);
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i,i.id))
+} 
+//checkbox diets eventlisner
+
+let dietLi = document.querySelector(".diet-Ul");
+for(let i of dietLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.id);
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i,i.id))
+
+} 
