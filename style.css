@@ -178,9 +178,12 @@ main {
 }
 
 .selection-Container {
-  border: rgb(5, 5, 37) solid 2px;
+  /* border: rgb(5, 5, 37) solid 2px; */
+
   width: 25%;
-  height: 100%;
+  height: 27rem;
+  margin-top: 2rem;
+  overflow-y: scroll;
 
   position: sticky;
   top: 0;
@@ -189,9 +192,28 @@ main {
   flex-direction: column;
 }
 
+::-webkit-scrollbar {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(121, 120, 120);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #494848;
+}
+
 .selections {
   /* border: orange dashed 3px; */
-
+  height: fit-content;
   padding-left: 2.5rem;
 }
 
@@ -201,8 +223,7 @@ main {
 .diet,
 .categories {
   /* border: black solid 3px; */
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.4rem;
 }
 
 .filterTitle,
@@ -210,11 +231,18 @@ main {
 .ticketsTitle,
 .dietTitle,
 .categoriesTitle {
+  width: 15rem;
   list-style: none;
   color: black;
   list-style: none;
   font-size: 1.5rem;
   font-family: sans-serif;
+  padding-right: 1rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  border-bottom: solid #b4b2b2 1.3px;
 }
 
 /* .filter-Ul,
@@ -222,15 +250,25 @@ main {
 .tickets-Ul,
 .diet-Ul,
 .categories-Ul {
+
+
 } */
 
 .li {
   /* border: red solid 2px; */
-  width: 59%;
+  /* border-bottom: #8a8989 solid 1px; */
+
+  width: 75%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
+}
+
+.liParag {
+  /* border: rgb(148, 109, 109) solid 2px; */
+
+  width: 80%;
 }
 
 a[href] {
@@ -291,7 +329,6 @@ ul .filter {
 }
 
 .cartProductsContainer {
-
   width: 300px;
   height: 400px;
   background-color: white;
@@ -344,7 +381,6 @@ ul .filter {
   width: 100%;
   height: 200px;
   position: relative;
-
 }
 
 .foodImgDiv img {
@@ -420,7 +456,6 @@ ul .filter {
 
 .removeImg:hover {
   transform: scale(1.2);
-
 }
 
 .totalBtn {
@@ -439,7 +474,6 @@ ul .filter {
   color: black;
 }
 
-
 .liDiv {
   width: 100%;
   height: 30px;
@@ -447,14 +481,7 @@ ul .filter {
   align-items: center;
   justify-content: space-between;
   color: #191919;
-
 }
-
-
-
-
-
-
 
 .shoppingBasket input {
   appearance: none;
@@ -538,7 +565,6 @@ footer {
   opacity: 0.8;
   text-transform: capitalize;
 }
-
 
 .footerLinks p {
   margin: 0px 1rem;
