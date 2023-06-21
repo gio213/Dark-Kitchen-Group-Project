@@ -359,7 +359,5 @@ for(let i of dietLi.children){
   let country = document.getElementById(i.id);
   console.log(country)
   country.addEventListener("click", () => checkCategory(i,i.id))
+
 } 
-
-
-
