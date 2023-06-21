@@ -1,6 +1,6 @@
 // Giorgi
 const shoppingBasket = document.querySelector("#basket");
-const circle = document.querySelector(".circle");
+
 const header = document.querySelector("header");
 const foodContainer = document.querySelector(".foodContainer");
 const search = document.querySelector(".input-field");
@@ -17,6 +17,7 @@ total.classList.add("totalBtn");
 
 // theme change button
 const themeSwitchBtn = document.getElementById("themeChanger");
+
 const setTheme = (theme) => (document.documentElement.className = theme);
 setTheme("light");
 themeSwitchBtn.addEventListener("change", () => {
@@ -94,12 +95,6 @@ const createCard = () => {
     const addTocardOmg = document.createElement("div");
     addTocardOmg.classList.add("addTocardOmg");
     rating.appendChild(addTocardOmg);
-    const offerDiv = document.createElement("div");
-    offerDiv.classList.add("offer");
-    foodImgDiv.appendChild(offerDiv);
-    const offer = document.createElement("h3");
-    offerDiv.appendChild(offer);
-    offer.textContent = `Offer: ${meals[i].offer}`;
 
     foodImg.src = meals[i].image;
     name.textContent = meals[i].name;
@@ -136,10 +131,6 @@ const createCard = () => {
         totalPrice += meals[i].price;
         console.log(totalPrice);
       }
-      if (shoppingCart.length > 0) {
-        circle.style.visibility = "visible";
-        circle.textContent = shoppingCart.length;
-      }
       console.log(shoppingCart);
       const listLi = document.createElement("li");
       const liDiv = document.createElement("div");
@@ -147,7 +138,7 @@ const createCard = () => {
       removeImg.classList.add("removeImg");
       removeImg.src = "./assets/icons8-remove-48.png";
       liDiv.classList.add("liDiv");
-      const liDivTxt = document.createElement("p");
+      const liDivTxt = document.createElement("h6");
       cartProductsContainer.appendChild(total);
       liDiv.appendChild(liDivTxt);
       listLi.appendChild(liDiv);
@@ -160,12 +151,6 @@ const createCard = () => {
         totalPrice -= meals[i].price;
         total.textContent = `Total: ${totalPrice.toFixed(2)} €`;
         listOl.removeChild(listLi);
-        shoppingCart.pop();
-        circle.textContent = shoppingCart.length;
-        if (shoppingCart.length === 0) {
-          circle.style.visibility = "hidden";
-          cartProductsContainer.removeChild(total);
-        }
       });
     });
   }
@@ -173,17 +158,20 @@ const createCard = () => {
 
 createCard(meals);
 
-shoppingBasket.addEventListener("click", () => {
-  if (shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "visible";
-  }
-  if (!shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "hidden";
-  }
-});
-// finish Giorgis part
+/*document.addEventListener("DOMContentLoaded", () => {
+  const shoppingBasket = document.querySelector(".shoppingBasket");
+  const cartProductsContainer = document.querySelector(".cartProductsContainer");
 
-// Other JavaScript code...
+  shoppingBasket.addEventListener("click", () => {
+    if (shoppingBasket.checked) {
+      cartProductsContainer.style.visibility = "visible";
+    } else {
+      cartProductsContainer.style.visibility = "hidden";
+    }
+  });
+
+  // Other JavaScript code...
+});*/
 
 let filter = document.querySelector(".filterTitle");
 let filterUl = document.querySelector(".filter-Ul");
@@ -280,6 +268,7 @@ const openForm = () => {
     <h1 id="form-title">Contact Form</h1>
     </div>
       <form class="contact-form" action="/submit"  method="POST">
+
       <div class="form-group">
         <label for="name" value="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -298,7 +287,7 @@ const openForm = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
-
+   
     </body>
     </html>
     `;
@@ -326,7 +315,9 @@ const openaboutUs = () => {
       At our Dark Kitchen, we focus on creating innovative and mouthwatering dishes that cater to various dietary preferences. Whether you're a meat lover, a vegetarian, or follow a specific diet, we have a wide range of options to satisfy your cravings.<br>
       Our dedicated team of chefs and staff work tirelessly to ensure that every order is prepared with utmost care and attention to detail. We value customer satisfaction and aim to exceed your expectations with every meal.<br>
       Thank you for choosing our Dark Kitchen. We look forward to serving you and creating memorable dining experiences.</p>
+
   </section>
+
     `;
 
   popup.document.open();
@@ -354,39 +345,40 @@ search.addEventListener("keyup", (e) => {
 });
 
 //checkbox category eventlisner
-let checkCategory = (checkbox, categ) => {
-  console.log(checkbox);
+let checkCategory =(checkbox,categ)=>{
+  console.log(checkbox)
   for (let card of foodContainer.children) {
     const tags = card.querySelector(".tags");
     for (let tag of tags.children) {
-      if (checkbox.children[0].checked == true) {
+      console.log("checkbox : ",checkbox.checked);
+      if(checkbox.checked==true){
         if (tag.textContent.includes(categ)) {
           card.style.display = "block";
         } else {
           card.style.display = "none";
         }
-      } else {
+      }else{
         card.style.display = "block";
       }
-    }
-  }
-};
+   }
+  }};
 
-let categoriesLi = document.querySelector(".categories-Ul");
-for (let i of categoriesLi.children) {
-  i.id = i.textContent;
-  console.log(i.id);
-  let country = document.getElementById(i.id);
-  console.log(country);
-  country.addEventListener("click", () => checkCategory(i, i.id));
-}
+ let categoriesLi = document.querySelector(".categories-Ul");
+for(let i of categoriesLi.children){
+  i.children[0].id=i.children[1].textContent;
+  console.log(i.id)
+  let country = document.getElementById(i.children[0].id);
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i.children[0],i.children[0].id))
+} 
 //checkbox diets eventlisner
 
 let dietLi = document.querySelector(".diet-Ul");
-for (let i of dietLi.children) {
-  i.id = i.textContent;
-  console.log(i.id);
+for(let i of dietLi.children){
+  i.id=i.textContent;
+  console.log(i.id)
   let country = document.getElementById(i.id);
-  console.log(country);
-  country.addEventListener("click", () => checkCategory(i, i.id));
+  console.log(country)
+  country.addEventListener("click", () => checkCategory(i,i.id))
+  
 }
