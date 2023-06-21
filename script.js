@@ -144,13 +144,19 @@ const createCard = () => {
 
 createCard(meals);
 
-shoppingBasket.addEventListener("click", () => {
-  if (shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "visible";
-  }
-  if (!shoppingBasket.checked) {
-    cartProductsContainer.style.visibility = "hidden";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const shoppingBasket = document.querySelector(".shoppingBasket");
+  const cartProductsContainer = document.querySelector(".cartProductsContainer");
+
+  shoppingBasket.addEventListener("click", () => {
+    if (shoppingBasket.checked) {
+      cartProductsContainer.style.visibility = "visible";
+    } else {
+      cartProductsContainer.style.visibility = "hidden";
+    }
+  });
+
+  // Other JavaScript code...
 });
 
 let filter = document.querySelector(".filterTitle");
