@@ -25,7 +25,7 @@
   --burgerMenu-background: hsla(0, 0%, 96%, 0.957);
 }
 
-:root,
+
 :root.dark {
   --highlight-color: hsl(180, 90%, 27%);
   --highlight-color-hover: hsl(180, 100%, 40%);
@@ -337,7 +337,6 @@ ul .filter {
   z-index: 2;
   animation: cardPopap 0.5s ease-in-out;
   border-radius: 15px;
-  /* opacity: 1; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -521,6 +520,8 @@ ul .filter {
   right: 14.8rem;
 }
 
+
+
 .rating i {
   width: 20px;
   height: 20px;
@@ -673,6 +674,7 @@ footer {
   .burgerMenu:hover {
     color: var(--highlight-color);
   }
+
   .close-filter {
     display: none;
   }
@@ -705,6 +707,7 @@ footer {
     width: 100%;
     justify-content: center;
   }
+
   .cartProductsContainer {
     width: 26rem;
     left: 1rem;
