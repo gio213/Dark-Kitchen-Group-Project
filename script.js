@@ -18,15 +18,26 @@ total.classList.add("totalBtn");
 // theme change button
 const themeSwitchBtn = document.getElementById("themeChanger");
 const setTheme = (theme) => (document.documentElement.className = theme);
-setTheme("light");
 themeSwitchBtn.addEventListener("change", () => {
   if (themeSwitchBtn.checked) {
     setTheme("dark");
+    localStorage.setItem("theme", "dark");
   }
   if (!themeSwitchBtn.checked) {
     setTheme("light");
+    localStorage.setItem("theme", "light");
   }
 });
+// retrieving theme from local storage
+const currentTheme = localStorage.getItem("theme")
+  ? localStorage.getItem("theme")
+  : null;
+if (currentTheme) {
+  setTheme(currentTheme);
+  if (currentTheme === "dark") {
+    themeSwitchBtn.checked = true;
+  }
+}
 
 let shoppingCart = [];
 let totalPrice = 0;
@@ -130,17 +141,14 @@ const createCard = () => {
 
     // adding to cart, total price, and cart array
     addTocardOmg.addEventListener("click", (e) => {
-      console.log(e.target);
       if (e.target.classList.contains("addTocardOmg")) {
         shoppingCart.push(meals[i].name + " " + meals[i].price + " €");
         totalPrice += meals[i].price;
-        console.log(totalPrice);
       }
       if (shoppingCart.length > 0) {
         circle.style.visibility = "visible";
         circle.textContent = shoppingCart.length;
       }
-      console.log(shoppingCart);
       const listLi = document.createElement("li");
       const liDiv = document.createElement("div");
       const removeImg = document.createElement("img");
@@ -355,7 +363,6 @@ search.addEventListener("keyup", (e) => {
 
 //checkbox category eventlisner
 let checkCategory = (checkbox, categ) => {
-  console.log(checkbox);
   for (let card of foodContainer.children) {
     const tags = card.querySelector(".tags");
     for (let tag of tags.children) {
@@ -375,9 +382,7 @@ let checkCategory = (checkbox, categ) => {
 let categoriesLi = document.querySelector(".categories-Ul");
 for (let i of categoriesLi.children) {
   i.id = i.textContent;
-  console.log(i.id);
   let country = document.getElementById(i.id);
-  console.log(country);
   country.addEventListener("click", () => checkCategory(i, i.id));
 }
 //checkbox diets eventlisner
@@ -385,8 +390,6 @@ for (let i of categoriesLi.children) {
 let dietLi = document.querySelector(".diet-Ul");
 for (let i of dietLi.children) {
   i.id = i.textContent;
-  console.log(i.id);
   let country = document.getElementById(i.id);
-  console.log(country);
   country.addEventListener("click", () => checkCategory(i, i.id));
 }

@@ -24,7 +24,7 @@
   --card-color: #fff;
 }
 
-:root,
+
 :root.dark {
   --highlight-color: hsl(180, 90%, 27%);
   --highlight-color-hover: hsl(180, 100%, 40%);
@@ -301,7 +301,6 @@ ul .filter {
   z-index: 2;
   animation: cardPopap 0.5s ease-in-out;
   border-radius: 15px;
-  /* opacity: 1; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -490,7 +489,10 @@ ul .filter {
   align-items: center;
   visibility: hidden;
   position: absolute;
+
 }
+
+
 
 .rating i {
   width: 20px;
