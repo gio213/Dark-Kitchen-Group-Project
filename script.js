@@ -209,7 +209,7 @@ let isTicketsUlActive = true;
 let isDietUlActive = true;
 let isCategoriesUlActive = true;
 
-filter.addEventListener("click", (event) => {
+/* filter.addEventListener("click", (event) => {
   event.preventDefault();
   if (isFilterUlActive) {
     filterUl.style = `display: none`;
@@ -218,9 +218,9 @@ filter.addEventListener("click", (event) => {
     filterUl.style.display = "block";
     isFilterUlActive = true;
   }
-});
+}); */
 
-offers.addEventListener("click", (event) => {
+/* offers.addEventListener("click", (event) => {
   event.preventDefault();
   if (isOffersUlActive) {
     offersUl.style = `display: none`;
@@ -229,9 +229,9 @@ offers.addEventListener("click", (event) => {
     offersUl.style.display = "block";
     isOffersUlActive = true;
   }
-});
+}); */
 
-tickets.addEventListener("click", (event) => {
+/* tickets.addEventListener("click", (event) => {
   event.preventDefault();
   if (isTicketsUlActive) {
     ticketsUl.style = `display: none`;
@@ -241,7 +241,7 @@ tickets.addEventListener("click", (event) => {
     isTicketsUlActive = true;
   }
 });
-
+ */
 diet.addEventListener("click", (event) => {
   event.preventDefault();
   if (isDietUlActive) {
@@ -386,9 +386,9 @@ let checkCategory = (checkbox, categ) => {
 let categoriesLi = document.querySelector(".categories-Ul");
 for (let i of categoriesLi.children) {
   i.children[0].id = i.children[1].textContent;
-  console.log(i.id);
+  /*   console.log(i.id); */
   let country = document.getElementById(i.children[0].id);
-  console.log(country);
+  /*  console.log(country); */
   country.addEventListener("click", () =>
     checkCategory(i.children[0], i.children[0].id)
   );
@@ -397,9 +397,13 @@ for (let i of categoriesLi.children) {
 
 let dietLi = document.querySelector(".diet-Ul");
 for (let i of dietLi.children) {
+  i.children[0].id = i.children[1].textContent;
   i.id = i.textContent;
-  let country = document.getElementById(i.id);
-  country.addEventListener("click", () => checkCategory(i, i.id));
+
+  let diet = document.getElementById(i.id);
+  diet.addEventListener("click", () =>
+    checkCategory(i.children[0], i.children[0].id)
+  );
 }
 
 /* burgerMenu */
@@ -420,3 +424,29 @@ const toggleMenu = () => {
 };
 
 burgerMenu.addEventListener("click", toggleMenu);
+
+/* stars filtr */
+
+/* const checkStar = (p) => {
+  if (p.getAttribute("id") == "fiveStar") {
+    for (let card of foodContainer.children) {
+      const ratings = card.querySelector(".starDiv");
+      const ratinsArray = Array.from(ratings);
+      console.log("start", ratings);
+      ratinsArray.forEach((star) => {
+        if (star.classList.contains("fa-solid")) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  }
+};
+
+let starLi = document.querySelectorAll("#filterByStar p");
+
+starLi.forEach((p) => {
+  p.addEventListener("click", checkStar(p));
+});
+ */

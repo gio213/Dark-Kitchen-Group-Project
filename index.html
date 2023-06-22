@@ -1,221 +1,242 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Giori, Aziza, Adam, Glaucielle" />
+    <meta property="og:title" content=" Dark Kitchen" />
+    <meta
+      property="og:image"
+      content="https://img.freepik.com/free-vector/detailed-chef-logo-template_23-2148986823.jpg"
+    />
+    <meta property="og:description" content=" Dark Kitchen" />
+    <meta
+      property="og:url"
+      content="//https://gio213.github.io/Dark-Kitchen-Group-Project///"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.png" />
+    <title>Kitchen</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Giori, Aziza, Adam, Glaucielle" />
-  <meta property="og:title" content=" Dark Kitchen" />
-  <meta property="og:image"
-    content="https://img.freepik.com/free-vector/detailed-chef-logo-template_23-2148986823.jpg" />
-  <meta property="og:description" content=" Dark Kitchen" />
-  <meta property="og:url" content="//https://gio213.github.io/Dark-Kitchen-Group-Project///" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.png">
-  <title>Kitchen</title>
-</head>
-
-<body>
-  <header id="header">
-    <div class="logoContainer">
-      <div class="logo">Kitchen</div>
-    </div>
-    <div class="loginContainer">
-      <div class="login">
-        <i class="fa-regular fa-user login-icon"></i>
-        <p class="user-login">Sign up or log in</p>
+  <body>
+    <header id="header">
+      <div class="logoContainer">
+        <div class="logo">Kitchen</div>
       </div>
-      <div class="shoppingBasket">
-        <div class="circle"></div>
-        <input type="checkbox" name="" id="basket" />
-      </div>
-      <div class="themeDiv">
-        <input type="checkbox" name="" id="themeChanger" />
-      </div>
-    </div>
-    <div class="search-burgerContainer">
-      <div class="burgerMenu" id="burgerMenu">
-        <i class="fa-solid fa-filter open-filter"></i>
-        <i class="fa-solid fa-xmark close-filter"></i>
-      </div>
-      <div class="searchBarContainer">
-        <div class="searchBar">
-          <i class="fa-solid fa-magnifying-glass searchBar-icon"></i>
-          <input class="input-field" type="text" placeholder="Dishes" />
+      <div class="loginContainer">
+        <div class="login">
+          <i class="fa-regular fa-user login-icon"></i>
+          <p class="user-login">Sign up or log in</p>
+        </div>
+        <div class="shoppingBasket">
+          <div class="circle"></div>
+          <input type="checkbox" name="" id="basket" />
+        </div>
+        <div class="themeDiv">
+          <input type="checkbox" name="" id="themeChanger" />
         </div>
       </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="selection-Container" id="selections_filter">
-      <ul class="selections">
-        <li class="filter">
-          <p class="filterTitle">Filter</p>
-          <ul class="filter-Ul">
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Best Noted</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Fast Delivery</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Recommended</p>
-            </li>
-          </ul>
-        </li>
-        <li class="offers">
-          <p class="offersTitle">Offers</p>
-          <ul class="offers-Ul">
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">All the offers</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Closest to you</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Formules</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Offers for 5€</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">1 bought = 1 free</p>
-            </li>
-          </ul>
-        </li>
-        <li class="tickets">
-          <p class="ticketsTitle">Restaurant Tickets</p>
-          <ul class="tickets-Ul">
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Endered</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Sodexo</p>
-            </li>
-          </ul>
-        </li>
-
-        <li class="diet">
-          <p class="dietTitle">Diet(s)</p>
-          <ul class="diet-Ul">
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Appetizer</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Chicken</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Beef</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Fish</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Seafood</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Vegetarian</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Dessert</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Cocktail</p>
-            </li>
-          </ul>
-        </li>
-
-        <li class="categories">
-          <p class="categoriesTitle">Categories</p>
-          <ul class="categories-Ul">
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">American</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Asian</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">British</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Indian</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Italian</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Japanese</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Chinese</p>
-            </li>
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Mexican</p>
-            </li>
-
-            <li class="li">
-              <input type="checkbox" />
-              <p class="liParag">Thai</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <!--Giorgi-->
-    <div class="foodContainer"></div>
-  </main>
-
-  <footer>
-    <div class="footerLeft">
-      <div class="footerLinks">
-        <p class="aboutUs">About Us</p>
-        <p class="contact">Contact</p>
+      <div class="search-burgerContainer">
+        <div class="burgerMenu" id="burgerMenu">
+          <i class="fa-solid fa-filter open-filter"></i>
+          <i class="fa-solid fa-xmark close-filter"></i>
+        </div>
+        <div class="searchBarContainer">
+          <div class="searchBar">
+            <i class="fa-solid fa-magnifying-glass searchBar-icon"></i>
+            <input class="input-field" type="text" placeholder="Dishes" />
+          </div>
+        </div>
       </div>
-      <p>Copyright © 2023 | All rights reserved</p>
-      <div class="footerSocialMedia">
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    </header>
+
+    <main>
+      <div class="selection-Container" id="selections_filter">
+        <ul class="selections">
+          <!--  <li class="filter">
+            <p class="filterTitle">Filter</p>
+            <ul class="filter-Ul" id="filterByStar">
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag" id="fiveStar">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag" id="fourStar">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag" id="threeStar">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </li>
+            </ul>
+          </li> -->
+          <!-- <li class="offers">
+            <p class="offersTitle">Offers</p>
+            <ul class="offers-Ul">
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">All the offers</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Closest to you</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Formules</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Offers for 5€</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">1 bought = 1 free</p>
+              </li>
+            </ul>
+          </li> -->
+          <!--   <li class="tickets">
+            <p class="ticketsTitle">Restaurant Tickets</p>
+            <ul class="tickets-Ul">
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Endered</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Sodexo</p>
+              </li>
+            </ul>
+          </li> -->
+
+          <li class="diet">
+            <p class="dietTitle">Diet(s)</p>
+            <ul class="diet-Ul">
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Appetizer</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Chicken</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Beef</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Fish</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Seafood</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Vegetarian</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Dessert</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Cocktail</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="categories">
+            <p class="categoriesTitle">Categories</p>
+            <ul class="categories-Ul">
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">American</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Asian</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">British</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Indian</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Italian</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Japanese</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Chinese</p>
+              </li>
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Mexican</p>
+              </li>
+
+              <li class="li">
+                <input type="checkbox" />
+                <p class="liParag">Thai</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </div>
 
-    <div class="footerRight">
-      <a href="#header"> <i class="fas fa-chevron-up"></i></a>
-    </div>
-  </footer>
+      <!--Giorgi-->
+      <div class="foodContainer"></div>
+    </main>
 
-  <script src="script.js" type="module"></script>
-</body>
+    <footer>
+      <div class="footerLeft">
+        <div class="footerLinks">
+          <p class="aboutUs">About Us</p>
+          <p class="contact">Contact</p>
+        </div>
+        <p>Copyright © 2023 | All rights reserved</p>
+        <div class="footerSocialMedia">
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
 
+      <div class="footerRight">
+        <a href="#header"> <i class="fas fa-chevron-up"></i></a>
+      </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
