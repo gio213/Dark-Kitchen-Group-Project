@@ -1,4 +1,6 @@
-import meals from "./meals.json" assert { type: "json" };
+/* import meals from "./meals" assert { type: "json" }; */
+import { meals } from "./meals.js";
+console.log(meals);
 // Giorgi
 const shoppingBasket = document.querySelector("#basket");
 const circle = document.querySelector(".circle");
